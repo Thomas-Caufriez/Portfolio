@@ -1,7 +1,7 @@
 /* ////////// OVERRIDES \\\\\\\\\\ */
 
-$headings-font-family: 'Bebas Neue', sans-serif;
-$btn-font-family: 'Bebas Neue', sans-serif;
+$headings-font-family: "Bebas Neue", serif;;
+$btn-font-family: "Bebas Neue", sans-serif;
 
 $font-size-base: 1.2rem;
 $h1-font-size: $font-size-base * 6;
@@ -17,24 +17,12 @@ $navbar-dark-brand-hover-color: #6c757d;
 @import "./../../node_modules/bootstrap/scss/bootstrap";
 
 /* //////////\\\\\\\\\\ */
-/* ////////// FONTS \\\\\\\\\\ */
-
-@font-face {
-    font-family: 'Bebas Neue';
-    src: url('./../fonts/Bebas_Neue/BebasNeue-Regular.ttf') format('truetype'),
-         url('./../fonts/Bebas_Neue/BebasNeue-Regular.woff') format('woff'),
-         url('./../fonts/Bebas_Neue/BebasNeue-Regular.woff2') format('woff2');
-    font-weight: normal;
-    font-style: normal;
-}
-
-/* //////////\\\\\\\\\\ */
 /* ////////// GENERAL \\\\\\\\\\ */
 
 a {
     color: $dark;
     text-decoration: none;
-    font-family: 'Bebas Neue';
+    font-family: "Bebas Neue", serif;
 }
 
 a:hover{
