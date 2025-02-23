@@ -11,8 +11,9 @@ This version is only the beginning, I only did the basic layout while learning s
 I need to postulate for an internship at the moment.
 
 Plan for futur updates :
--V0.2 : responsive behaviour
--V0.3 : language (frensh / english)
+-V0.2 : adding projects pages
+-V0.3 : responsive behaviour
+-V0.4 : language (frensh / english)
 -V1.0 : dark/light mode + previous updates corrections
 -V1.1 : parallax
 -V1.2 : animations and more
