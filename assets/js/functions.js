@@ -35,6 +35,6 @@ function createProjectPreview(title, link, picture, text) {
 
 // PROJECTS
 
-createProjectPreview("Dynalivres", "/pages/dynalivres.html", "/assets/img/dynalivresPreview.png", "Student project");
-createProjectPreview("Cookup", "/pages/dynalivres.html", "/assets/img/cookupPreview.png", "Student project");
-createProjectPreview("Portfolio", "/pages/dynalivres.html", "/assets/img/portfolioPreview.png", "Personal project");
+createProjectPreview("Dynalivres", "./pages/dynalivres.html", "./assets/img/dynalivresPreview.png", "Student project");
+createProjectPreview("Cookup", "./pages/dynalivres.html", "./assets/img/cookupPreview.png", "Student project");
+createProjectPreview("Portfolio", "./pages/dynalivres.html", "./assets/img/portfolioPreview.png", "Personal project");
