@@ -11903,7 +11903,7 @@ textarea.form-control-lg {
 /* ////////// FONTS \\\\\\\\\\ */
 @font-face {
   font-family: "Bebas Neue";
-  src: url("../assets/fonts/Bebas_Neue/BebasNeue-Regular.ttf") format("truetype"), url("../assets/fonts/Bebas_Neue/BebasNeue-Regular.woff") format("woff"), url("../assets/fonts/Bebas_Neue/BebasNeue-Regular.woff2") format("woff2");
+  src: url("./../assets/fonts/Bebas_Neue/BebasNeue-Regular.ttf") format("truetype"), url("./../assets/fonts/Bebas_Neue/BebasNeue-Regular.woff") format("woff"), url("./../assets/fonts/Bebas_Neue/BebasNeue-Regular.woff2") format("woff2");
   font-weight: normal;
   font-style: normal;
 }
