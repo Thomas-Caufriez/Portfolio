@@ -1,0 +1,91 @@
+/* ////////// OVERRIDES \\\\\\\\\\ */
+
+$headings-font-family: 'Bebas Neue', sans-serif;
+$btn-font-family: 'Bebas Neue', sans-serif;
+
+$font-size-base: 1.2rem;
+$h1-font-size: $font-size-base * 6;
+$h2-font-size: $font-size-base * 3;
+$h3-font-size: $font-size-base * 2;
+
+$navbar-light-brand-hover-color: #6c757d;
+$navbar-dark-brand-hover-color: #6c757d;
+
+/* //////////\\\\\\\\\\ */
+/* ////////// IMPORT BOOTSTRAP \\\\\\\\\\ */
+
+@import "../../node_modules/bootstrap/scss/bootstrap";
+
+/* //////////\\\\\\\\\\ */
+/* ////////// FONTS \\\\\\\\\\ */
+
+@font-face {
+    font-family: 'Bebas Neue';
+    src: url('../assets/fonts/Bebas_Neue/BebasNeue-Regular.ttf') format('truetype'),
+         url('../assets/fonts/Bebas_Neue/BebasNeue-Regular.woff') format('woff'),
+         url('../assets/fonts/Bebas_Neue/BebasNeue-Regular.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* //////////\\\\\\\\\\ */
+/* ////////// GENERAL \\\\\\\\\\ */
+
+a {
+    color: $dark;
+    text-decoration: none;
+    font-family: 'Bebas Neue';
+}
+
+a:hover{
+    color: $gray-700;
+    transition: 0.3s;
+}
+
+.pdf {
+    width: 30%;
+    aspect-ratio: 1 / 1.414;
+    transition: 0.3s;
+    box-shadow: 0 0 10px 3px $gray-600;
+}
+
+.pdf:hover {
+    transform: scale(1.05);
+    transition: 0.3s;
+    box-shadow: 0 0 10px 8px $gray-600;
+}
+
+i {
+    color: $dark;
+    transition: 0.3s;
+    font-size: 3em;
+}
+
+i:hover {
+    color: $gray-800;
+    transition: 0.3s;
+    transform: scale(1.1);
+}
+
+.card {
+    transition: 0.3s;
+    box-shadow: 0 0 8px 1px $gray-600;
+}
+
+.card:hover {
+    transition: 0.3s;
+    transform: scale(1.05);
+    box-shadow: 0 0 8px 2px $gray-600;
+}
+
+h2 {
+    text-decoration: underline;
+}
+
+h3 {
+    text-decoration: underline dotted;
+}
+
+hr {
+    width: 50%;
+}

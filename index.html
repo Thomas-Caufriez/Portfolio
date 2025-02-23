@@ -4,22 +4,75 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Thomas Caufriez</title>
+    <!-- STYLES -->
     <link rel="stylesheet" href="/assets/css/index.css">
+    <!-- SCRIPTS -->
+    <script src="/assets/js/functions.js" defer></script>
+    <script src="https://kit.fontawesome.com/cf22592f1b.js" crossorigin="anonymous" defer></script>
 </head>
 <body>
-    <nav>
-        <a href="/index.html">Home</a>
-        <a href="/pages/about.html">About me</a>
-        <a href="/pages/portfolio.html">My projects</a>
-    </nav>
-    <div>
-        <h2>Welcome in the world of ...</h2>
-        <h1>Thomas Caufriez</h1>
+    <header>
+        <nav class="navbar fixed-top">
+            <div class="container-fluid d-flex flex-nowrap">
+                <a href="#intro" class="navbar-brand">Thomas Caufriez</a>
+                <div class="container d-flex flex-nowrap justify-content-end">
+                    <a class="me-5 text-nowrap" href="#me">About me</a>
+                    <a href="#projects">Projects</a>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- FIRST SECTION -->
+
+    <div class="d-flex justify-content-center align-items-center min-vh-100" id="intro">
+        <h1 class="fs-1 text-nowrap">Thomas Caufriez</h1>
     </div>
-    <footer>
-        <a href="mailto:thcaufriez@gmail.com">Email</a>
-        <a href="#">LinkedIn</a>
-        <a href="#">GitHub</a>
-    </footer>
+
+    <!-- SECOND SECTION -->
+
+    <div class="container min-vh-100" id="me">
+        <h2 class="fs-2 text-center my-5">About me</h2>
+
+        <h3 class="fs-3 text-center my-5">Links</h3>
+        <div class="d-flex justify-content-center my-5 column-gap-5">
+            <a class="text-center" href="mailto:thcaufriez@gmail.com" target="_blank">
+                <i class="fa-solid fa-square-envelope"></i>
+            </a>
+            <a class="text-center" href="https://www.linkedin.com/in/thomas-caufriez-26b77a2a3/" target="_blank">
+                <i class="fa-brands fa-linkedin"></i>
+            </a>
+            <a class="text-center back" href="https://github.com/Thomas-Caufriez" target="_blank">
+                <i class="fa-brands fa-square-github"></i>
+            </a>
+        </div>
+
+        <hr class="my-5 mx-auto">
+
+        <h3 class="fs-3 text-center my-5">Biography</h3>
+        <div class="d-flex flex-column justify-content-center align-items-center text-justify fs-5">
+            <p class="col-6">Currently a student in multimedia writing and digital professional has become. My training makes me a real swiss knife through graphic design, web development, project management and communication.</p>
+            <p class="col-6">Thanks to my skills, I want to specialize in website creation and project management. Loving to take the lead, I bring my motivation, my good mood and my discipline to my colleagues in order to ensure the success of projects.</p>
+            <p class="col-6">Always willing to exchange and collaborate on ambitious projects. Do not hesitate to contact me!</p>
+        </div>
+
+        <hr class="my-5 mx-auto">
+
+        <h3 class="fs-3 text-center my-5">curriculum</h3>
+        <div class="text-center">
+            <a href="assets/img/CVThomasCaufriez.pdf" download="CVThomasCaufriez">
+                <img class="pdf" src="assets/img/CVThomasCaufriez.png" alt="CVThomasCaufriez">
+            </a>
+        </div>
+    </div>
+
+    <!-- THIRD SECTION -->
+
+    <div class="container min-vh-100" id="projects">
+        <h2 class="fs-2 text-center my-5">Projects</h2>
+        <div class="row row-cols-4 g-5 justify-content-around" id="projectList">
+            <!-- WHERE THE JS FUNCTION IS ADDED -->
+        </div>
+    </div>
 </body>
 </html>
