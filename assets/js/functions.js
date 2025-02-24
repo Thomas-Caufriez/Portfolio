@@ -1,3 +1,5 @@
+window.alert("This webpage is still under development, have a look at the readme on github to see where I am at!\nActual version : V0.1")
+
 // FUNCTION TO CREATE PROJECTS CARDS PREVIEWS
 
 function createProjectPreview(title, link, picture, text) {
@@ -37,4 +39,3 @@ function createProjectPreview(title, link, picture, text) {
 
 createProjectPreview("Dynalivres", "./dynalivres.html", "./assets/img/dynalivresPreview.png", "Student project");
 createProjectPreview("Cookup", "./dynalivres.html", "./assets/img/cookupPreview.png", "Student project");
-createProjectPreview("Portfolio", "./dynalivres.html", "./assets/img/portfolioPreview.png", "Personal project");
