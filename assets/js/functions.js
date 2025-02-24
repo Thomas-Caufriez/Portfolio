@@ -1,6 +1,6 @@
 // UPDATE ALERT WINDOW
 
-window.alert("This webpage is still under development, <h1>have a look at the readme on github to see where I am at!\nActual version : V0.1")
+window.alert("This webpage is still under development, have a look at the readme on github to see where I am at!\nActual version : V0.1")
 
 // FUNCTION TO CREATE PROJECTS CARDS PREVIEWS
 
