@@ -1,13 +1,8 @@
 // UPDATE ALERT WINDOW
-console.log("Current path: " + window.location.pathname);
 
-document.addEventListener("DOMContentLoaded", function () {
-    if (window.location.pathname === "/index.html" || window.location.pathname === "/"){  
-        window.alert("This webpage is still under development, have a look at the readme on github to see where I am at!\nActual version : V0.1");
-    }
-});
+window.alert("This webpage is still under development, <h1>have a look at the readme on github to see where I am at!\nActual version : V0.1")
 
-// FUNCTION TO CREATE PROJECTS CARDS
+// FUNCTION TO CREATE PROJECTS CARDS PREVIEWS
 
 function createProjectPreview(title, link, picture, text) {
     let projectList = document.getElementById("projectList");
