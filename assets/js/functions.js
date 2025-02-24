@@ -1,12 +1,13 @@
 // UPDATE ALERT WINDOW
+console.log("Current path: " + window.location.pathname);
 
 document.addEventListener("DOMContentLoaded", function () {
-    if (window.location.pathname === "/index.html") {  
+    if (window.location.pathname === "/index.html" || window.location.pathname === "/"){  
         alert("This webpage is still under development, have a look at the readme on github to see where I am at!\nActual version : V0.1");
     }
 });
 
-// FUNCTION TO CREATE PROJECTS CARDS PREVIEWS
+// FUNCTION TO CREATE PROJECTS CARDS
 
 function createProjectPreview(title, link, picture, text) {
     let projectList = document.getElementById("projectList");
