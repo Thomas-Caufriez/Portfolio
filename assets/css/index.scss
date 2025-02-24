@@ -43,6 +43,16 @@ a:hover{
     box-shadow: 0 0 10px 8px $gray-600;
 }
 
+.ipdf {
+    opacity: 0;
+    transition: 0.3s;
+}
+
+a:hover .ipdf {
+    opacity: 1;
+    transition: 0.3s;
+}
+
 i {
     color: $dark;
     transition: 0.3s;

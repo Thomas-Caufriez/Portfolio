@@ -11925,6 +11925,16 @@ a:hover {
   box-shadow: 0 0 10px 8px #6c757d;
 }
 
+.ipdf {
+  opacity: 0;
+  transition: 0.3s;
+}
+
+a:hover .ipdf {
+  opacity: 1;
+  transition: 0.3s;
+}
+
 i {
   color: #212529;
   transition: 0.3s;
