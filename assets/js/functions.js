@@ -1,7 +1,7 @@
 // UPDATE ALERT WINDOW
 
 document.addEventListener("DOMContentLoaded", function () {
-    if (window.location.pathname === "/index.html") {  
+    if (window.location.pathname === "./index.html") {  
         alert("This webpage is still under development, have a look at the readme on github to see where I am at!\nActual version : V0.1");
     }
 });
