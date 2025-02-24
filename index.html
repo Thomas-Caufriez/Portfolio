@@ -6,63 +6,50 @@
     <title>Thomas Caufriez</title>
     <!-- STYLES -->
     <link rel="stylesheet" href="./assets/css/index.css">
-    <!-- FONTS -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
     <!-- SCRIPTS -->
     <script src="./assets/js/functions.js" defer></script>
     <script src="https://kit.fontawesome.com/cf22592f1b.js" crossorigin="anonymous" defer></script>
 </head>
+
 <body class="alertMsg">
     <header>
         <nav class="navbar fixed-top">
             <div class="container-fluid d-flex flex-nowrap">
                 <a href="#intro" class="navbar-brand">Thomas Caufriez</a>
-                <div class="container d-flex flex-nowrap justify-content-end">
-                    <a class="me-5 text-nowrap" href="#me">About me</a>
-                    <a href="#projects">Projects</a>
+                <div class="container d-flex flex-nowrap justify-content-end text-nowrap">
+                    <a href="#me">About me</a>
+                    <a class="mx-5" href="#projects">Projects</a>
+                    <a href="#cv">CV</a>
                 </div>
             </div>
         </nav>
     </header>
 
-    <!-- FIRST SECTION -->
-
-    <div class="d-flex justify-content-center align-items-center min-vh-100" id="intro">
+    <div id="intro" class="d-flex justify-content-center align-items-center min-vh-100">
         <h1 class="fs-1 text-nowrap">Thomas Caufriez</h1>
     </div>
 
-    <!-- SECOND SECTION -->
+    <hr id="me" class="my-5 mx-auto">
 
-    <div class="container min-vh-100" id="me">
-        <h2 class="fs-2 text-center my-5">About me</h2>
-
-        <h3 class="fs-3 text-center my-5">Links</h3>
-        <div class="d-flex justify-content-center my-5 column-gap-5">
-            <a class="text-center" href="mailto:thcaufriez@gmail.com" target="_blank">
-                <i class="fa-solid fa-square-envelope"></i>
-            </a>
-            <a class="text-center" href="https://www.linkedin.com/in/thomas-caufriez-26b77a2a3/" target="_blank">
-                <i class="fa-brands fa-linkedin"></i>
-            </a>
-            <a class="text-center back" href="https://github.com/Thomas-Caufriez" target="_blank">
-                <i class="fa-brands fa-square-github"></i>
-            </a>
-        </div>
-
-        <hr class="my-5 mx-auto">
-
-        <h3 class="fs-3 text-center my-5">Biography</h3>
+    <div class="container min-vh-100">
         <div class="d-flex flex-column justify-content-center align-items-center text-justify fs-5">
             <p class="col-6">Currently a student in multimedia writing and digital professional has become. My training makes me a real swiss knife through graphic design, web development, project management and communication.</p>
             <p class="col-6">Thanks to my skills, I want to specialize in website creation and project management. Loving to take the lead, I bring my motivation, my good mood and my discipline to my colleagues in order to ensure the success of projects.</p>
             <p class="col-6">Always willing to exchange and collaborate on ambitious projects. Do not hesitate to contact me!</p>
         </div>
+    </div>
 
-        <hr class="my-5 mx-auto">
+    <hr id="projects" class="my-5 mx-auto">
 
-        <h3 class="fs-3 my-5 text-center">curriculum </h3>
+    <div class="container min-vh-100">
+        <div class="row row-cols-4 g-5 justify-content-around" id="projectList">
+            <!-- WHERE THE JS FUNCTION IS ADDED -->
+        </div>
+    </div>
+
+    <hr id="cv" class="my-5 mx-auto">
+
+    <div class="container min-vh-100">
         <div class="text-center position-relative">
             <a href="./assets/img/CVThomasCaufriez.pdf" download="CVThomasCaufriez">
                 <img class="pdf" src="./assets/img/CVThomasCaufriez.png" alt="CVThomasCaufriez">
@@ -71,13 +58,18 @@
         </div>
     </div>
 
-    <!-- THIRD SECTION -->
+    <hr class="my-5 mx-auto">
 
-    <div class="container min-vh-100" id="projects">
-        <h2 class="fs-2 text-center my-5">Projects</h2>
-        <div class="row row-cols-4 g-5 justify-content-around" id="projectList">
-            <!-- WHERE THE JS FUNCTION IS ADDED -->
-        </div>
+    <div class="d-flex justify-content-center my-5 column-gap-5">
+        <a class="text-center" href="mailto:thcaufriez@gmail.com" target="_blank">
+            <i class="fa-solid fa-square-envelope"></i>
+        </a>
+        <a class="text-center" href="https://www.linkedin.com/in/thomas-caufriez/" target="_blank">
+            <i class="fa-brands fa-linkedin"></i>
+        </a>
+        <a class="text-center back" href="https://github.com/Thomas-Caufriez" target="_blank">
+            <i class="fa-brands fa-square-github"></i>
+        </a>
     </div>
 </body>
 </html>
