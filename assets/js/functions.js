@@ -1,6 +1,10 @@
 // UPDATE ALERT WINDOW
 
-window.alert("This webpage is still under development, have a look at the readme on github to see where I am at!\nActual version : V0.1")
+let alerted = sessionStorage.getItem('alerted') || ''; // maybe change for cookies later on
+if (alerted != 'yes') {
+    alert("This webpage is still under development, have a look at the readme on github to see where I am at!\nActual version : V0.1");
+    sessionStorage.setItem('alerted','yes');
+}
 
 // FUNCTION TO CREATE PROJECTS CARDS PREVIEWS
 
@@ -39,5 +43,5 @@ function createProjectPreview(title, link, picture, text) {
 
 // PROJECTS
 
-createProjectPreview("Dynalivres", "./dynalivres.html", "./assets/img/dynalivresPreview.png", "Student project");
-createProjectPreview("Cookup", "./dynalivres.html", "./assets/img/cookupPreview.png", "Student project");
+createProjectPreview("Dynalivres", "./dynalivres.html", "./assets/img/dynalivresRemake.png", "Student project");
+createProjectPreview("Cookup", "./dynalivres.html", "./assets/img/cookup.png", "Student project");

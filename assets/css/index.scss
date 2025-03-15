@@ -3,13 +3,18 @@
 $headings-font-family: "Bebas Neue", serif;;
 $btn-font-family: "Bebas Neue", sans-serif;
 
-$font-size-base: 1.2rem;
+$font-size-base: 1rem;
 $h1-font-size: $font-size-base * 6;
 $h2-font-size: $font-size-base * 3;
 $h3-font-size: $font-size-base * 2;
 
 $navbar-light-brand-hover-color: #6c757d;
 $navbar-dark-brand-hover-color: #6c757d;
+
+$gold: #E5C100;
+$goldLight: #F1D000;
+$deepPurple: #5a2ca0;
+$deepPurpleLight: #8a5ed1;
 
 /* //////////\\\\\\\\\\ */
 /* ////////// IMPORTS \\\\\\\\\\ */
@@ -22,6 +27,33 @@ $navbar-dark-brand-hover-color: #6c757d;
 /* ////////// GENERAL \\\\\\\\\\ */
 
 a {
+    text-decoration: none;
+    color: $dark;
+    transition: 0.3s;
+}
+
+a:hover {
+    color: $gray-700;
+    transition: 0.3s;
+}
+
+h2 {
+    text-decoration: underline;
+}
+
+h3 {
+    text-decoration: underline dotted;
+}
+
+hr {
+    width: 50%;
+}
+
+/* //////////\\\\\\\\\\ */
+/* ////////// SPECIFIC \\\\\\\\\\ */
+/* ///// NAVBAR \\\\\ */
+
+nav a {
     color: $dark;
     text-decoration: none;
     font-family: "Bebas Neue", serif;
@@ -31,7 +63,7 @@ a {
     }
 }
 
-a:hover{
+nav a:hover{
     color: $gray-700;
     transition: 0.3s;
     .ipdf {
@@ -39,6 +71,25 @@ a:hover{
         transition: 0.3s;
     }
 }
+
+/* /////\\\\\ */
+/* ///// CARDS \\\\\ */
+
+.card {
+    color: $dark;
+    transition: 0.3s;
+    box-shadow: 0 0 8px 1px $gray-600;
+}
+
+.card:hover{
+    color: $dark;
+    transition: 0.3s;
+    transform: scale(1.05);
+    box-shadow: 0 0 8px 2px $gray-600;
+}
+
+/* /////\\\\\ */
+/* ///// PDF \\\\\ */
 
 .ipdf {
     opacity: 0;
@@ -58,6 +109,9 @@ a:hover{
     box-shadow: 0 0 10px 8px $gray-600;
 }
 
+/* /////\\\\\ */
+/* ///// CLICKABLE ICONS \\\\\ */
+
 i {
     color: $dark;
     transition: 0.3s;
@@ -70,25 +124,4 @@ i:hover {
     transform: scale(1.1);
 }
 
-.card {
-    transition: 0.3s;
-    box-shadow: 0 0 8px 1px $gray-600;
-}
-
-.card:hover {
-    transition: 0.3s;
-    transform: scale(1.05);
-    box-shadow: 0 0 8px 2px $gray-600;
-}
-
-h2 {
-    text-decoration: underline;
-}
-
-h3 {
-    text-decoration: underline dotted;
-}
-
-hr {
-    width: 50%;
-}
+/* /////\\\\\ */

@@ -22,57 +22,57 @@
 
 <body class="alertMsg">
     <header>
-        <nav class="navbar fixed-top">
+        <nav class="navbar fixed-top bg-white">
             <div class="container-fluid d-flex flex-nowrap">
                 <a href="#intro" class="navbar-brand">Thomas Caufriez</a>
-                <div class="container d-flex flex-nowrap justify-content-end text-nowrap">
-                    <a href="#me">About me</a>
-                    <a class="mx-5" href="#projects">Projects</a>
+                <div class="container d-flex justify-content-end text-nowrap">
+                    <a href="#projects">Projects</a>
+                    <a class="mx-5" href="#about">About</a>
                     <a href="#cv">CV</a>
                 </div>
             </div>
         </nav>
     </header>
 
-    <div id="intro" class="d-flex justify-content-center align-items-center min-vh-100">
-        <h1 class="fs-1 text-nowrap">Thomas Caufriez</h1>
-    </div>
+    <section id="intro" class="d-flex justify-content-center align-items-center min-vh-100">
+        <h1 class="custom-title text-nowrap">Thomas Caufriez</h1>
+    </section>
 
-    <hr id="me" class="my-5 mx-auto">
+    <hr id="projects" class="my-5 mx-auto">
 
-    <div class="container min-vh-100">
-        <h2 class="fs-2 mb-5 text-center">About me</h2>
+    <section class="container min-vh-100">
+        <h2 class="mb-5 text-center">Projects</h2>
+        <div class="row row-cols-4 g-5 justify-content-around" id="projectList">
+            <!-- WHERE THE JS FUNCTION IS ADDED -->
+        </div>
+    </section>
+
+    <hr id="about" class="my-5 mx-auto">
+
+    <section class="container min-vh-100">
+        <h2 class="mb-5 text-center">About me</h2>
         <div class="d-flex flex-column justify-content-center align-items-center text-justify fs-5">
             <p class="col-6">Currently a student in multimedia writing and digital professional has become. My training makes me a real swiss knife through graphic design, web development, project management and communication.</p>
             <p class="col-6">Thanks to my skills, I want to specialize in website creation and project management. Loving to take the lead, I bring my motivation, my good mood and my discipline to my colleagues in order to ensure the success of projects.</p>
             <p class="col-6">Always willing to exchange and collaborate on ambitious projects. Do not hesitate to contact me!</p>
         </div>
-    </div>
-
-    <hr id="projects" class="my-5 mx-auto">
-
-    <div class="container min-vh-100">
-        <h2 class="fs-2 mb-5 text-center">Projects</h2>
-        <div class="row row-cols-4 g-5 justify-content-around" id="projectList">
-            <!-- WHERE THE JS FUNCTION IS ADDED -->
-        </div>
-    </div>
+    </section>
 
     <hr id="cv" class="my-5 mx-auto">
 
-    <div class="container min-vh-100">
-        <h2 class="fs-2 mb-5 text-center">Curriculum</h2>
+    <section class="container min-vh-100">
+        <h2 class="mb-5 text-center">Curriculum</h2>
         <div class="text-center position-relative">
             <a href="./assets/img/CVThomasCaufriez.pdf" download="CVThomasCaufriez">
                 <img class="pdf" src="./assets/img/CVThomasCaufriez.png" alt="CVThomasCaufriez">
                 <i class="fa-solid fa-download position-absolute top-50 start-50 translate-middle ipdf"></i>
             </a>
         </div>
-    </div>
+    </section>
 
     <hr class="my-5 mx-auto">
 
-    <div class="d-flex justify-content-center my-5 column-gap-5">
+    <section class="d-flex justify-content-center my-5 column-gap-5">
         <a class="text-center" href="mailto:thcaufriez@gmail.com" target="_blank">
             <i class="fa-solid fa-square-envelope"></i>
         </a>
@@ -82,6 +82,6 @@
         <a class="text-center back" href="https://github.com/Thomas-Caufriez" target="_blank">
             <i class="fa-brands fa-square-github"></i>
         </a>
-    </div>
+    </section>
 </body>
 </html>
