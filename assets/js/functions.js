@@ -2,7 +2,7 @@
 
 let alerted = sessionStorage.getItem('alerted') || ''; // maybe change for cookies later on
 if (alerted != 'yes') {
-    alert("This webpage is still under development, have a look at the readme on github to see where I am at!\nActual version : V0.1");
+    alert("This webpage is still under development, have a look at the readme on github to see where I am at!\nActual version : V0.2");
     sessionStorage.setItem('alerted','yes');
 }
 
