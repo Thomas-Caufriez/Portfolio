@@ -11,6 +11,9 @@ $h3-font-size: $font-size-base * 2;
 $navbar-light-brand-hover-color: #6c757d;
 $navbar-dark-brand-hover-color: #6c757d;
 
+$dark: #212529;
+$primary: $dark;
+
 $gold: #E5C100;
 $goldLight: #F1D000;
 $deepPurple: #5a2ca0;
@@ -47,6 +50,11 @@ h3 {
 
 hr {
     width: 50%;
+}
+
+.textJustify {
+    text-align: justify;
+    text-justify: inter-word;
 }
 
 /* //////////\\\\\\\\\\ */
@@ -124,4 +132,17 @@ i:hover {
     transform: scale(1.1);
 }
 
+/* /////\\\\\ */
+/* ///// CLICKABLE OR NOT IMAGES \\\\\ */
+.imgClick, .imgNoClick {
+    transition: 0.3s;
+    box-shadow: 0 0 20px 1px $gray-600;
+    border-radius: 1%;
+}
+
+.imgClick:hover {
+    transition: 0.3s;
+    box-shadow: 0 0 15px 3px $gray-600;
+    transform: scale(1.05);
+}
 /* /////\\\\\ */

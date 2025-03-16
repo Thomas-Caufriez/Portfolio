@@ -44,4 +44,4 @@ function createProjectPreview(title, link, picture, text) {
 // PROJECTS
 
 createProjectPreview("Dynalivres", "./dynalivres.html", "./assets/img/dynalivresRemake.png", "Student project");
-createProjectPreview("Cookup", "./dynalivres.html", "./assets/img/cookup.png", "Student project");
+createProjectPreview("Cookup", "./cookup.html", "./assets/img/cookup.png", "Student project");

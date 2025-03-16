@@ -18,4 +18,19 @@ Plan for futur updates :
 -V1.1 : parallax
 -V1.2 : animations and more
 
+### V0.2: Project pages (16-03-25) ###
+
+I added the projects pages, there's probably still some details to do.
+I changed the alert to display only once per session.
+
+I changed future updates because I had a few ideas. I want to make this website a classy one with a base of dark, gold and purple colors in v0.5.
+
+Plan for futur updates :
+-V0.3 : responsive behaviour
+-V0.4 : language (frensh / english)
+-v0.5 : styling the website
+-V1.0 : Code clean up
+-V1.1 : parallax
+-V1.2 : animations and more
+
 ###
