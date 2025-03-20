@@ -29,6 +29,7 @@ Plan for futur updates :
 -V0.3 : responsive behaviour
 -V0.4 : language (frensh / english)
 -v0.5 : styling the website
+-v0.6 : Optimize SEO
 -V1.0 : Code clean up
 -V1.1 : parallax
 -V1.2 : animations and more
