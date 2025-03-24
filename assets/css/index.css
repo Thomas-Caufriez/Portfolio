@@ -11918,22 +11918,25 @@ nav a:hover .ipdf {
 
 /* /////\\\\\ */
 /* ///// PDF \\\\\ */
-.ipdf {
-  opacity: 0;
-  transition: 0.3s;
-}
-
-.pdf {
+.pdf img {
   width: 30%;
   aspect-ratio: 1/1.414;
   transition: 0.3s;
   box-shadow: 0 0 10px 3px #6c757d;
 }
+.pdf i {
+  opacity: 0%;
+  transition: 0, 3s;
+}
 
-.pdf:hover {
+.pdf:hover img {
   transform: scale(1.05);
   transition: 0.3s;
   box-shadow: 0 0 10px 8px #6c757d;
+}
+.pdf:hover i {
+  opacity: 100%;
+  transition: 0, 3s;
 }
 
 /* /////\\\\\ */
