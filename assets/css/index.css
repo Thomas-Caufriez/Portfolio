@@ -11953,11 +11953,17 @@ nav a:hover .ipdf {
 }
 
 /* /////\\\\\ */
-/* ///// CARDS \\\\\ */
+/* ///// PROJECT CARDS \\\\\ */
+@media screen and (max-width: 768px) {
+  .card {
+    scale: 0.7;
+  }
+}
 .card {
   color: #212529;
   transition: 0.3s;
   box-shadow: 0 0 8px 1px #6c757d;
+  width: 30em;
 }
 
 .card:hover {

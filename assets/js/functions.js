@@ -8,13 +8,12 @@ if (alerted != 'yes') {
 
 // FUNCTION TO CREATE PROJECTS CARDS PREVIEWS
 
-function createProjectPreview(title, link, picture, text) {
+function createProjectPreview(title, link, picture, tags) {
     let projectList = document.getElementById("projectList");
 
     let card = document.createElement("a");
     card.href = link;
     card.className = "card col-3 p-0";
-    card.style.width = "30rem";
 
     let img = document.createElement("img");
     img.src = picture;
@@ -29,8 +28,8 @@ function createProjectPreview(title, link, picture, text) {
     cardTitle.textContent = title;
 
     let cardText = document.createElement("p");
-    cardText.className = "text-end fst-italic";
-    cardText.textContent = text;
+    cardText.className = "fst-italic";
+    cardText.textContent = tags;
 
     cardBody.appendChild(cardTitle);
     cardBody.appendChild(cardText);
@@ -43,8 +42,8 @@ function createProjectPreview(title, link, picture, text) {
 
 // PROJECTS
 
-createProjectPreview("Dynalivres", "./dynalivres.html", "./assets/img/dynalivresRemake.png", "Student project");
-createProjectPreview("Cookup", "./cookup.html", "./assets/img/cookup.png", "Student project");
+createProjectPreview("Dynalivres", "./dynalivres.html", "./assets/img/dynalivresRemake.png", "Rebranding, UX/UI, Prototyping, Development");
+createProjectPreview("Cookup", "./cookup.html", "./assets/img/cookup.png", "Branding, UX/UI, Prototyping, Development");
 
 // FUNCTIONS TO FILTER ICONS IN THE ABOUT SECTION
 

@@ -82,12 +82,19 @@ nav a:hover{
 }
 
 /* /////\\\\\ */
-/* ///// CARDS \\\\\ */
+/* ///// PROJECT CARDS \\\\\ */
+
+@media screen and (max-width: 768px) {
+    .card {
+        scale: 0.7;
+    }
+}
 
 .card {
     color: $dark;
     transition: 0.3s;
     box-shadow: 0 0 8px 1px $gray-600;
+    width: 30em;
 }
 
 .card:hover{
@@ -142,6 +149,7 @@ a i:hover {
 
 /* /////\\\\\ */
 /* ///// CLICKABLE OR NOT IMAGES \\\\\ */
+
 .imgClick, .imgNoClick {
     transition: 0.3s;
     box-shadow: 0 0 20px 1px $gray-600;
@@ -153,8 +161,10 @@ a i:hover {
     box-shadow: 0 0 15px 3px $gray-600;
     transform: scale(1.05);
 }
+
 /* /////\\\\\ */
 /* ///// ABOUT ICONS \\\\\ */
+
 @media screen and (max-width: 768px) {
     #skillIcons i {
         scale: 0.6;
