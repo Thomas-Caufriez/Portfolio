@@ -25,7 +25,7 @@
         <nav class="navbar fixed-top bg-white">
             <div class="container-fluid d-flex flex-nowrap">
                 <a href="#intro" class="navbar-brand">Thomas Caufriez</a>
-                <div class="container d-flex justify-content-end text-nowrap">
+                <div class="container-fluid d-flex justify-content-end">
                     <a href="#projects">Projects</a>
                     <a class="mx-5" href="#about">About</a>
                     <a href="#cv">CV</a>
@@ -34,34 +34,48 @@
         </nav>
     </header>
 
-    <section id="intro" class="d-flex justify-content-center align-items-center min-vh-100">
-        <h1 class="custom-title text-nowrap">Thomas Caufriez</h1>
+    <section id="intro" class="d-flex justify-content-center align-items-center vh-100">
+        <h1 class="text-nowrap">Thomas Caufriez</h1>
     </section>
 
     <hr id="projects" class="my-5 mx-auto">
 
-    <section class="container min-vh-100">
-        <h2 class="mb-5 text-center">Projects</h2>
-        <div class="row row-cols-4 g-5 justify-content-around" id="projectList">
-            <!-- WHERE THE JS FUNCTION IS ADDED -->
+    <section class="container-fluid min-vh-100">
+        <h2 class="text-center">Projects</h2>
+        <div class="row row-cols-4 g-5 justify-content-around align-items-center" id="projectList">
+            <!-- WHERE THE JS FUNCTION "createProjectPreview" IS ADDED -->
         </div>
     </section>
 
     <hr id="about" class="my-5 mx-auto">
 
-    <section class="container min-vh-100">
-        <h2 class="mb-5 text-center">About me</h2>
-        <div class="d-flex flex-column justify-content-center align-items-center textJustify fs-5">
-            <p class="col-6">Currently a student in multimedia writing and digital professional has become. My training makes me a real swiss knife through graphic design, web development, project management and communication.</p>
-            <p class="col-6">Thanks to my skills, I want to specialize in website creation and project management. Loving to take the lead, I bring my motivation, my good mood and my discipline to my colleagues in order to ensure the success of projects.</p>
-            <p class="col-6">Always willing to exchange and collaborate on ambitious projects. Do not hesitate to contact me!</p>
+    <section class="d-flex flex-column vh-100">
+        <h2 class="text-center">About me</h2>
+        <div class="row row-cols-md-3 row-cols-1 h-100 justify-content-around align-content-center row-gap-5 p-5 fs-5">
+            <p class="col">Hi! I'm Thomas, a 21 years old, talented, creative and modest web developer. I like to code, create new things and explore what I can do by myself. I'm convicted that people can work better if they are having fun together!</p>
+            <div class="col mb-2">
+                <div class="d-flex justify-content-around mb-2">
+                    <h3 id="front" class="selectIcon iconInactive">Front</h3>
+                    <h3 id="back" class="selectIcon iconInactive">Back</h3>
+                    <h3 id="other" class="selectIcon iconInactive">Others</h3>
+                </div>
+                <div class="row row-cols-4 g-3 justify-content-evenly text-center" id="skillIcons">
+                    <i class="fa-brands fa-html5" data-category="front"></i>
+                    <i class="fa-brands fa-css3-alt" data-category="front"></i>
+                    <i class="fa-brands fa-square-js" data-category="front"></i>
+                    <i class="fa-brands fa-python" data-category="back"></i>
+                    <i class="fa-brands fa-php" data-category="back"></i>
+                    <i class="fa-brands fa-wordpress-simple" data-category="back"></i>
+                    <i class="fa-brands fa-figma" data-category="other"></i>
+                </div>
+            </div>
         </div>
     </section>
 
     <hr id="cv" class="my-5 mx-auto">
 
-    <section class="container min-vh-100">
-        <h2 class="mb-5 text-center">Curriculum</h2>
+    <section class="d-flex flex-column vh-100">
+        <h2 class="text-center">Curriculum</h2>
         <div class="text-center position-relative">
             <a class="pdf" href="./assets/img/CVThomasCaufriez.pdf" download="CVThomasCaufriez">
                 <img src="./assets/img/CVThomasCaufriez.png" alt="CVThomasCaufriez">
@@ -72,7 +86,7 @@
 
     <hr class="my-5 mx-auto">
 
-    <section class="d-flex justify-content-center my-5 column-gap-5">
+    <footer class="d-flex justify-content-center column-gap-5 py-3">
         <a class="text-center" href="mailto:thcaufriez@gmail.com" target="_blank">
             <i class="fa-solid fa-square-envelope"></i>
         </a>
@@ -82,6 +96,6 @@
         <a class="text-center back" href="https://github.com/Thomas-Caufriez" target="_blank">
             <i class="fa-brands fa-square-github"></i>
         </a>
-    </section>
+    </footer>
 </body>
 </html>

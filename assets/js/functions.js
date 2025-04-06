@@ -45,3 +45,27 @@ function createProjectPreview(title, link, picture, text) {
 
 createProjectPreview("Dynalivres", "./dynalivres.html", "./assets/img/dynalivresRemake.png", "Student project");
 createProjectPreview("Cookup", "./cookup.html", "./assets/img/cookup.png", "Student project");
+
+// FUNCTIONS TO FILTER ICONS IN THE ABOUT SECTION
+
+document.querySelectorAll('.selectIcon').forEach(hover => {
+    hover.addEventListener('mouseover', function(event) {
+        document.querySelectorAll('.iconActive').forEach(item => {
+            item.classList.remove('iconActive');
+        });
+        event.target.classList.add('iconActive');
+        const tag = event.target.id;
+        document.querySelectorAll('#skillIcons i').forEach(icons => {
+            const iconTag = icons.getAttribute('data-category');
+            if (iconTag === tag) {
+                icons.classList.remove('fadeOut');
+                icons.classList.add('fadeIn');
+            } else {
+                icons.classList.remove('fadeIn');
+                icons.classList.add('fadeOut');
+            }
+        });
+    });
+});
+
+//
