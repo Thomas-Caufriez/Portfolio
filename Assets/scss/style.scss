@@ -1,0 +1,28 @@
+@use 'reset' as *;
+@use 'variables' as *;
+@use 'cards' as *;
+@use 'buttons' as *;
+
+body {
+
+    background: $purpleGradient;
+    min-height: 100vh;
+
+    h1  {
+
+        display: inline-block;
+
+        background: $hotGradientHorizontal;
+        
+        background-clip: text;
+        color: transparent;
+
+        -webkit-text-fill-color: transparent;
+        -webkit-background-clip: text;
+
+        padding: 10px;
+
+        font-size: 32;
+        font-family: 'Horsemen', sans-serif;
+    }
+}

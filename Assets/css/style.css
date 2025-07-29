@@ -1,0 +1,120 @@
+/* Reset CSS minimaliste */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+html, body {
+  height: 100%;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+img, picture, video, canvas, svg {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+button, input, select, textarea {
+  font: inherit;
+  background: none;
+  color: inherit;
+  outline: none;
+  border-radius: 0;
+  appearance: none;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+ul, ol {
+  list-style: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+@font-face {
+  font-family: "Horsemen";
+  src: url("../fonts/Horsemen.woff2") format("woff2"), url("../fonts/Horsemen.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Neon";
+  src: url("../fonts/Neon.woff2") format("woff2"), url("../fonts/Neon.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Raleway";
+  src: url("../fonts/Raleway-Regular.woff2") format("woff2"), url("../fonts/Raleway-Regular.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Raleway";
+  src: url("../fonts/Raleway-Bold.woff2") format("woff2"), url("../fonts/Raleway-Bold.woff") format("woff");
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "RussoOne";
+  src: url("../fonts/RussoOne.woff2") format("woff2"), url("../fonts/RussoOne.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Audiowide";
+  src: url("../fonts/Audiowide.woff2") format("woff2"), url("../fonts/Audiowide.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Torchzilla";
+  src: url("../fonts/torchzilla.woff2") format("woff2"), url("../fonts/torchzilla.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "AXROutrunner";
+  src: url("../fonts/AXROutrunner.woff2") format("woff2"), url("../fonts/AXROutrunner.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+body {
+  background: linear-gradient(180deg, #18132A 0%, #2A214A 25%, #2A214A 100%);
+  min-height: 100vh;
+}
+body h1 {
+  display: inline-block;
+  background: linear-gradient(-90deg, #DB408E 0%, #FFDC57 100%);
+  background-clip: text;
+  color: transparent;
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+  padding: 10px;
+  font-size: 32;
+  font-family: "Horsemen", sans-serif;
+}
+
+/*# sourceMappingURL=style.css.map */

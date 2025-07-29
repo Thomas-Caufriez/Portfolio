@@ -1,0 +1,95 @@
+///// COLORS
+$deepPurple               : #18132A;
+$darkPurple               : #2A214A;
+$purple                   : #403568;
+$lightPurple              : #5B4B97;
+$purpleGradient           : linear-gradient(180deg, $deepPurple 0%, $darkPurple 25%, $darkPurple 100%);
+
+$pink                     : #DB408E;
+$yellow                   : #FFDC57;
+$hotGradientVertical      : linear-gradient(0deg, $pink 0%, $yellow 100%);
+$hotGradientHorizontal    : linear-gradient(-90deg, $pink 0%, $yellow 100%);
+
+$blue                     : #2FABD9;
+$green                    : #00D4AA;
+$coldGradientVertical     : linear-gradient(0deg, $blue 0%, $green 100%);
+$coldGradientHorizontal   : linear-gradient(-90deg, $blue 0%, $green 100%);
+
+$orange                   : #ED8E73;
+
+$white                    : #FEFEFA;
+
+///// FONTS
+@font-face { // MAIN TITLES (h1 + custom)
+  font-family: 'Horsemen';
+  src: url('../fonts/Horsemen.woff2') format('woff2'),
+       url('../fonts/Horsemen.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face { // SUB TITLES (h2, h3)
+  font-family: 'Neon';
+  src: url('../fonts/Neon.woff2') format('woff2'),
+       url('../fonts/Neon.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face { // PARAGRAPHS REGULAR
+  font-family: 'Raleway';
+  src: url('../fonts/Raleway-Regular.woff2') format('woff2'),
+       url('../fonts/Raleway-Regular.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face { // PARAGRAPHS BOLD
+  font-family: 'Raleway';
+  src: url('../fonts/Raleway-Bold.woff2') format('woff2'),
+       url('../fonts/Raleway-Bold.woff') format('woff');
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face { // BUTTONS
+  font-family: 'RussoOne';
+  src: url('../fonts/RussoOne.woff2') format('woff2'),
+       url('../fonts/RussoOne.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face { // TAGS
+  font-family: 'Audiowide';
+  src: url('../fonts/Audiowide.woff2') format('woff2'),
+       url('../fonts/Audiowide.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face { // CUSTOM INTRO
+  font-family: 'Torchzilla';
+  src: url('../fonts/torchzilla.woff2') format('woff2'),
+       url('../fonts/torchzilla.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face { // CUSTOM INTRO
+  font-family: 'AXROutrunner';
+  src: url('../fonts/AXROutrunner.woff2') format('woff2'),
+       url('../fonts/AXROutrunner.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+/////
