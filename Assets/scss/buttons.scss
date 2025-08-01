@@ -1,0 +1,102 @@
+/// IMPORT FILES
+@use 'variables' as *;
+
+/// CONTENT
+.btn-wrapper {
+
+    position: relative;
+
+    display: inline-block;
+
+    &::before {
+
+        content: '';
+
+        position: absolute;
+
+        inset: 0;
+
+        margin: -0.2rem;
+
+        border-radius: 12px;
+        
+        background-image: $hotGradientMovingDiagonal;
+        background-size: 200% 200%;
+
+        animation: gradientMovingDiagonal 10s linear infinite;
+
+        z-index: -1;
+
+        transition: opacity 0.3s ease-in-out;
+        
+    }
+
+    .btn { // credit : gradient border code took in part from Coding2GO https://www.youtube.com/watch?v=PTVXnOrQoBQ&t=64s
+
+        font-size: 1.125rem;
+        font-family: 'RussoOne', sans-serif;
+
+        color: $white;
+
+        padding: 1rem 2rem;
+
+        background-color: $darkPurple;
+
+        border: none;
+        border-radius: 10px;
+
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
+
+        white-space: nowrap;
+
+        transition: transform 0.3s ease-in-out;
+
+        box-shadow: 0 0 15px $orange;
+
+        cursor: pointer;
+    }
+
+    &:hover {
+
+        .btn {
+
+            background: $hotGradientMovingDiagonal;
+            background-size: 200% 200%;
+
+            animation: gradientMovingDiagonal 10s linear infinite;
+
+            color: $purple;
+
+            transform: translate(-5px, -5px);
+        }
+
+        &::before {
+
+            opacity: 0.5;
+        }
+    }
+
+    &.active {
+
+        .btn {
+
+            background: $hotGradientMovingDiagonal;
+            background-size: 200% 200%;
+
+            animation: gradientMovingDiagonal 10s linear infinite;
+
+            color: $purple;
+
+            transform: translate(-5px, -5px);
+
+            cursor: default;
+        }
+
+        &::before {
+
+            opacity: 0.5;
+        }
+    }
+}

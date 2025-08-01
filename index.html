@@ -7,6 +7,74 @@
     <link rel="stylesheet" href="Assets/css/style.css">
 </head>
 <body>
-    <h1>Hello</h1>
+    <section class="container">
+
+        <div class="row">
+            <div class="col-8">
+
+                <h2 class="horsemen" data-text="Hello !">Hello !</h2>
+
+                <p>My name is Thomas Caufriez and I’m an aspiring web developer based in Belgium who likes to discover things and to create random stuff.</p>
+                <p>Actually, in the middle of my studies, my formation in multimedia writing gives me a lot of different skills not only in web development, but also in design, UX/UI, storytelling, and a lot more.</p>
+                <p>That makes me very multi-purpose!</p>
+
+                <div class="btn-wrapper">
+                    <a href="#" class="btn">Get my resume</a>
+                </div>
+
+            </div>
+            
+            <div class="col-4">
+                <div class="img-wrapper">
+                    <img src="Assets/images/car30D.svg" alt="car">
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+    <section class="container">
+
+        <div class="row">
+            <h2 data-text="My skills">My skills</h2>
+        </div>
+
+        <div class="row selector">
+
+            <div class="btn-wrapper btnSkills active">
+                <button class="btn" data-filter="all">All</button>
+            </div>
+
+            <div class="btn-wrapper btnSkills">
+                <button class="btn" data-filter="front">Front</button>
+            </div>
+
+            <div class="btn-wrapper btnSkills">
+                <button class="btn" data-filter="back">Back</button>
+            </div>
+
+            <div class="btn-wrapper btnSkills">
+                <button class="btn" data-filter="other">Others</button>
+            </div>
+
+        </div>
+
+        <div class="row skillIconLayout">
+            
+            <img src="/Assets/images/adobe.svg" alt="Adobe icon" class="skillIcon" data-category="others">
+            <img src="/Assets/images/bootstrap.svg" alt="Bootstrap icon" class="skillIcon" data-category="front">
+            <img src="/Assets/images/figma.svg" alt="Figma icon" class="skillIcon" data-category="others">
+            <img src="/Assets/images/html.svg" alt="Html icon" class="skillIcon" data-category="front">
+            <img src="/Assets/images/js.svg" alt="Javascript icon" class="skillIcon" data-category="front">
+            <img src="/Assets/images/php.svg" alt="PHP icon" class="skillIcon" data-category="back">
+            <img src="/Assets/images/python.svg" alt="Python icon" class="skillIcon" data-category="back">
+            <img src="/Assets/images/sass.svg" alt="Sass icon" class="skillIcon" data-category="front">
+            <img src="/Assets/images/slack.svg" alt="Slack icon" class="skillIcon" data-category="others">
+            <img src="/Assets/images/wordpress.svg" alt="WordPress icon" class="skillIcon" data-category="back">
+
+        </div>
+
+    </section>
 </body>
+<script type="module" src="assets/javascripts/main.js" defer></script>
 </html>

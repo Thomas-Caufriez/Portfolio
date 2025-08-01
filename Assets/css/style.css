@@ -45,9 +45,39 @@ table {
   border-spacing: 0;
 }
 
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  max-width: 1280px;
+  margin: 180px auto;
+}
+
+.row {
+  display: flex;
+  width: 100%;
+  gap: 6rem;
+}
+
+.col-8 {
+  flex: 8;
+}
+
+.col-4 {
+  flex: 4;
+}
+
 @font-face {
   font-family: "Horsemen";
   src: url("../fonts/Horsemen.woff2") format("woff2"), url("../fonts/Horsemen.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "RussoOne";
+  src: url("../fonts/RussoOne.woff2") format("woff2"), url("../fonts/RussoOne.woff") format("woff");
   font-weight: normal;
   font-style: normal;
   font-display: swap;
@@ -74,13 +104,6 @@ table {
   font-display: swap;
 }
 @font-face {
-  font-family: "RussoOne";
-  src: url("../fonts/RussoOne.woff2") format("woff2"), url("../fonts/RussoOne.woff") format("woff");
-  font-weight: normal;
-  font-style: normal;
-  font-display: swap;
-}
-@font-face {
   font-family: "Audiowide";
   src: url("../fonts/Audiowide.woff2") format("woff2"), url("../fonts/Audiowide.woff") format("woff");
   font-weight: normal;
@@ -101,20 +124,186 @@ table {
   font-style: normal;
   font-display: swap;
 }
-body {
-  background: linear-gradient(180deg, #18132A 0%, #2A214A 25%, #2A214A 100%);
+@keyframes gradientMovingHorizontal {
+  0% {
+    background-position: 200% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+@keyframes gradientMovingVertical {
+  0% {
+    background-position: 50% 200%;
+  }
+  100% {
+    background-position: 50% 0%;
+  }
+}
+@keyframes gradientMovingDiagonal {
+  0% {
+    background-position: 200% 200%;
+  }
+  100% {
+    background-position: 0% 0%;
+  }
+}
+.btn-wrapper {
+  position: relative;
+  display: inline-block;
+}
+.btn-wrapper::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  margin: -0.2rem;
+  border-radius: 12px;
+  background-image: linear-gradient(to bottom right, #FFDC57, #DB408E, #FFDC57, #DB408E, #FFDC57);
+  background-size: 200% 200%;
+  animation: gradientMovingDiagonal 10s linear infinite;
+  z-index: -1;
+  transition: opacity 0.3s ease-in-out;
+}
+.btn-wrapper .btn {
+  font-size: 1.125rem;
+  font-family: "RussoOne", sans-serif;
+  color: #FEFEFA;
+  padding: 1rem 2rem;
+  background-color: #2A214A;
+  border: none;
+  border-radius: 10px;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  white-space: nowrap;
+  transition: transform 0.3s ease-in-out;
+  box-shadow: 0 0 15px #ED8E73;
+  cursor: pointer;
+}
+.btn-wrapper:hover .btn {
+  background: linear-gradient(to bottom right, #FFDC57, #DB408E, #FFDC57, #DB408E, #FFDC57);
+  background-size: 200% 200%;
+  animation: gradientMovingDiagonal 10s linear infinite;
+  color: #403568;
+  transform: translate(-5px, -5px);
+}
+.btn-wrapper:hover::before {
+  opacity: 0.5;
+}
+.btn-wrapper.active .btn {
+  background: linear-gradient(to bottom right, #FFDC57, #DB408E, #FFDC57, #DB408E, #FFDC57);
+  background-size: 200% 200%;
+  animation: gradientMovingDiagonal 10s linear infinite;
+  color: #403568;
+  transform: translate(-5px, -5px);
+  cursor: default;
+}
+.btn-wrapper.active::before {
+  opacity: 0.5;
+}
+
+html {
   min-height: 100vh;
+  height: auto;
+}
+
+body {
+  background: linear-gradient(to bottom, #18132A 0%, #2A214A 25%);
+  min-height: 100vh;
+  height: auto;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  padding: 0 180px;
 }
 body h1 {
   display: inline-block;
-  background: linear-gradient(-90deg, #DB408E 0%, #FFDC57 100%);
+  background: linear-gradient(to right, #FFDC57, #DB408E);
   background-clip: text;
   color: transparent;
   -webkit-text-fill-color: transparent;
   -webkit-background-clip: text;
   padding: 10px;
-  font-size: 32;
+  font-size: 2rem;
   font-family: "Horsemen", sans-serif;
+}
+body h2 {
+  display: inline-block;
+  position: relative;
+  background: linear-gradient(to right, #FFDC57, #DB408E);
+  background-clip: text;
+  color: transparent;
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+  font-size: 2rem;
+  font-family: "RussoOne", sans-serif;
+}
+body h2::before {
+  content: "";
+  position: absolute;
+  height: 2px;
+  width: 100%;
+  background: linear-gradient(to right, #FFDC57, #DB408E);
+  border-radius: 100px;
+  bottom: 10%;
+}
+body h2::after {
+  content: attr(data-text);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  color: #ED8E73;
+  -webkit-text-fill-color: #ED8E73;
+  filter: blur(10px);
+  opacity: 0.3;
+  z-index: -1;
+}
+body p {
+  font-size: 1.25rem;
+  font-family: "Raleway", sans-serif;
+  margin: 1rem 0;
+  color: #FEFEFA;
+}
+body .img-wrapper {
+  width: 100%;
+  height: 100%;
+  display: flex;
+}
+body .img-wrapper img {
+  width: 100%;
+  height: auto;
+}
+
+.horsemen {
+  font-family: "horsemen", sans-serif;
+  padding: 10px;
+}
+.horsemen::before {
+  display: none;
+}
+.horsemen::after {
+  padding: 10px;
+}
+
+.selector {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: space-evenly;
+  width: 60%;
+  margin: 50px 0;
+}
+
+.skillIconLayout {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  column-gap: 10rem;
+}
+.skillIconLayout .skillIcon {
+  width: 4.5rem;
+  height: auto;
+  filter: drop-shadow(0 0 2px #ED8E73);
 }
 
 /*# sourceMappingURL=style.css.map */
