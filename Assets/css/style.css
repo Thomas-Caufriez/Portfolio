@@ -206,8 +206,7 @@ html {
   min-height: 100vh;
   height: auto;
 }
-
-body {
+html body {
   background: linear-gradient(to bottom, #18132A 0%, #2A214A 25%);
   min-height: 100vh;
   height: auto;
@@ -215,7 +214,7 @@ body {
   background-attachment: fixed;
   padding: 0 180px;
 }
-body h1 {
+html body h1 {
   display: inline-block;
   background: linear-gradient(to right, #FFDC57, #DB408E);
   background-clip: text;
@@ -226,7 +225,7 @@ body h1 {
   font-size: 2rem;
   font-family: "Horsemen", sans-serif;
 }
-body h2 {
+html body h2 {
   display: inline-block;
   position: relative;
   background: linear-gradient(to right, #FFDC57, #DB408E);
@@ -237,7 +236,7 @@ body h2 {
   font-size: 2rem;
   font-family: "RussoOne", sans-serif;
 }
-body h2::before {
+html body h2::before {
   content: "";
   position: absolute;
   height: 2px;
@@ -246,7 +245,7 @@ body h2::before {
   border-radius: 100px;
   bottom: 10%;
 }
-body h2::after {
+html body h2::after {
   content: attr(data-text);
   position: absolute;
   top: 0;
@@ -259,18 +258,18 @@ body h2::after {
   opacity: 0.3;
   z-index: -1;
 }
-body p {
+html body p {
   font-size: 1.25rem;
   font-family: "Raleway", sans-serif;
   margin: 1rem 0;
   color: #FEFEFA;
 }
-body .img-wrapper {
+html body .img-wrapper {
   width: 100%;
   height: 100%;
   display: flex;
 }
-body .img-wrapper img {
+html body .img-wrapper img {
   width: 100%;
   height: auto;
 }
@@ -303,7 +302,12 @@ body .img-wrapper img {
 .skillIconLayout .skillIcon {
   width: 4.5rem;
   height: auto;
-  filter: drop-shadow(0 0 2px #ED8E73);
+  filter: drop-shadow(0 0 3px #ED8E73);
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}
+.skillIconLayout .skillIcon.hidden {
+  opacity: 0.5;
+  filter: drop-shadow(0 0 0);
 }
 
 /*# sourceMappingURL=style.css.map */
