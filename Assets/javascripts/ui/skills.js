@@ -1,4 +1,30 @@
-console.log('skillsFilter.js loaded')
+console.log('skills.js loaded')
+
+// SKILL GENERATOR
+
+const skills = [
+
+    { src: "/Assets/images/bootstrap.svg", alt: "Bootstrap icon", category: "front"},
+    { src: "/Assets/images/html.svg", alt: "HTML icon", category: "front"},
+    { src: "/Assets/images/js.svg", alt: "Javascript icon", category: "front"},
+    { src: "/Assets/images/sass.svg", alt: "Sass icon", category: "front"},
+    { src: "/Assets/images/php.svg", alt: "PHP icon", category: "back"},
+    { src: "/Assets/images/python.svg", alt: "Python icon", category: "back"},
+    { src: "/Assets/images/wordpress.svg", alt: "WordPress icon", category: "back"},
+    { src: "/Assets/images/adobe.svg", alt: "Adobe icon", category: "others"},
+    { src: "/Assets/images/figma.svg", alt: "Figma icon", category: "others"},
+    { src: "/Assets/images/slack.svg", alt: "Slack icon", category: "others"},
+];
+
+const iconLayout = document.querySelector(".skillsContainer");
+
+skills.forEach((skill) => [
+    iconLayout.innerHTML += `
+        <div class="iconContainer">
+            <img src="${skill.src}" alt="${skill.alt}" class="skillIcon" data-category="${skill.category}">
+        </div>
+    `
+]);
 
 // SKILLS LISTENER
 const btnSkills     = document.querySelectorAll(".btnSkills");

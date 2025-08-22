@@ -1,0 +1,17 @@
+/// IMPORT FILES
+@use 'variables' as *;
+
+/// CONTENT
+
+footer {
+
+    &.container {
+
+        padding-bottom: 50px;
+    }
+
+    .row {
+
+        justify-content: space-between;
+    }
+}

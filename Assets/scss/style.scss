@@ -5,6 +5,8 @@
 @use 'animations' as *;
 @use 'cards' as *;
 @use 'buttons' as *;
+@use 'skills' as *;
+@use 'footer' as *;
 
 /// GENERAL
 
@@ -15,14 +17,12 @@ html {
 
     body {
 
-        background: $purpleGradient;
+        background: $darkPurple;
         min-height: 100vh;
         height: auto;
 
         background-repeat: no-repeat;
         background-attachment: fixed;
-
-        padding: 0 180px;
 
         h1  {
 
@@ -136,41 +136,5 @@ html {
     &::after {
 
         padding: 10px;
-    }
-}
-
-.selector {
-    
-    display: flex;
-    flex-wrap: nowrap;
-    justify-content: space-evenly;
-
-    width: 60%;
-
-    margin: 50px 0;
-}
-
-.skillIconLayout {
-
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    column-gap: 10rem;
-
-    .skillIcon {
-
-        width: 4.5rem;
-        height: auto;
-
-        filter: drop-shadow(0 0 3px $orange);
-
-        transition: opacity 0.5s ease, transform 0.5s ease;
-
-        &.hidden {
-
-            opacity: 0.5;
-
-            filter: drop-shadow(0 0 0);
-        }
     }
 }

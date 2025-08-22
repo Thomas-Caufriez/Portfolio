@@ -1,5 +1,14 @@
 /// LAYOUT
-.container { // I wanted to make nearly the same classes as Bootstrap without having to use it
+.container {
+
+    width: 100%;
+    
+    position: relative;
+
+    padding: 180px 180px;
+}
+
+.content {
 
     display: flex;
     flex-direction: column;
@@ -8,7 +17,7 @@
     width: 100%;
     max-width: 1280px;
 
-    margin: 180px auto ;
+    margin: 0 auto ;
 }
 
 .row {
@@ -17,7 +26,6 @@
 
     width: 100%;
 
-    gap: 6rem;
 }
 
 .col-8 {

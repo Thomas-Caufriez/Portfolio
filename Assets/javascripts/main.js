@@ -1,3 +1,4 @@
 console.log('main.js loaded')
 
-import "./ui/skillsFilter.js";
+import "./ui/skills.js";
+import "./ui/cards.js";
