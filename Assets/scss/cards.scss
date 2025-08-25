@@ -51,7 +51,7 @@
     }
 }
 
-/// CONTENT
+/// LAYOUT
 
 #cardSection {
 
@@ -76,99 +76,260 @@
 
             align-items: flex-start;
 
+            
+        }
+    }
+}
+
+// CARDS
+
+.cardContainer { //general
+
+    width: 340px;
+    height: 345px;
+
+    transition: 500ms ease-out;
+
+    .card {
+
+        width: 100%;
+        height: 100%;
+
+        position: relative;
+
+        .cardImg {
+
+            aspect-ratio: 16 / 9;
+        }
+
+        .cardOnline, .cardArchive{
+
+            position: absolute;
+
+            top: 3%;
+            left: 3%;
+
+            background-color: $green;
+
+            padding: 5px 15px;
+
+            border-radius: 10px;
+
+            color: $white;
+            font-family: 'AudioWide', sans-serif;
+            font-size: 1rem;
+
+            box-shadow: 0 0 8px $purple;
+        }
+
+        .cardArchive {
+
+            background-color: $orange !important;
+        }
+
+        .cardBody {
+
+            background-color: $purple;
+
+            padding: 10px;
+
+            position: relative;
+
+            z-index: 0;
+
+            .cardText {
+
+                width: 50%;
+
+                .cardTitle {
+
+                    color: $white;
+
+                    font-size: 2rem;
+                    font-family: 'Neon', sans-serif;
+
+                    position: relative;
+
+                    width: fit-content;
+
+                    z-index: 2;
+
+                    text-shadow: 0 0 2px $white;
+
+                    margin-bottom: 20px;
+                }
+
+                .cardTags {
+
+                    display: flex;
+                    flex-wrap: wrap;
+
+                    gap: 10px;
+
+                    span {
+
+                        background: $hotGradientMovingDiagonal;
+                        animation: gradientMovingDiagonal 20s linear infinite;
+                        background-size: 200% 200%;
+
+                        z-index: 2;
+
+                        padding: 2px 10px;
+
+                        border-radius: 10px;
+
+                        color: $darkPurple;
+
+                        font-family: 'AudioWide', sans-serif;
+                        font-size: 1rem;
+                        text-align: center;
+
+                        box-shadow: 0 0 5px $orange;
+                    }
+                }
+            }
+
+            .cardIcon {
+
+                position: absolute;
+
+                bottom: 20px;
+                right: 20px;
+                z-index: 2;
+
+                max-width: 45%;
+                height: auto;
+                max-height: 200px;
+
+                filter: drop-shadow(0 0 3px $darkPurple);
+            }
+        }
+    }
+
+    &--online { // specific to online cards
+
+        overflow: hidden;
+        border-radius: 20px;
+
+        box-shadow: 0 0 20px $purple;
+
+        &:hover {
+
+            cursor: pointer;
+
+            transform: translateY(-5%);
+
+            .cardBody {
+
+                &::before { // glass effect
+
+                    transform: skew(-45deg) translate(250%, -10%);
+                }
+
+                .cardTitle::before { // underline
+
+                    width: 100% !important;
+                }
+            }
+        }
+
+        .cardBody {
+
+            &::before { // glass effect
+
+                content: "";
+                
+                position: absolute;
+
+                width: 50%;
+                height: 120%;
+                z-index: 1;
+
+                opacity: 30%;
+                background: $white;
+
+                filter: blur(50px);
+
+                transition: 500ms ease-out;
+                transform: skew(-45deg) translate(-200%, -10%);
+            }
+
+            .cardTitle {
+
+                &::before { // underline
+
+                    content: "";
+
+                    position: absolute;
+                    bottom: 8px;
+                    left: 0;
+
+                    width: 0%;
+                    height: 2px;
+
+                    border-radius: 50%;
+                    background-color: $white;
+
+                    box-shadow: 0 0 2px $white;
+
+                    transition: 500ms ease-out;
+                }
+            }
+        }
+    }
+
+    &--archive { // specific to not online cards
+
+        &:hover {
+
             .card {
 
-                width: 340px;
-                height: auto;
+                cursor: pointer;
+                transform: rotateY(180deg);
+            }
+        }
+
+        .card {
+
+            transition: transform 1500ms;
+            transform-style: preserve-3d;
+
+            .front, .back {
+
+                width: 100%;
+                height: 100%;
+
+                position: absolute;
+
+                backface-visibility: hidden;
+                -webkit-backface-visibility: hidden;
 
                 border-radius: 20px;
                 overflow: hidden;
 
-                position: relative;
+                box-shadow: 0 0 20px $purple;
+            }
 
-                box-shadow: 0 0 10px $darkPurple;
+            .back {
 
-                transition: 500ms ease-out;
+                transform: rotateY(180deg);
 
-                &:hover {
-
-                    transform: translateY(-5%);
-                    box-shadow: 0 0 20px $darkPurple;
-
-                    .cardBody {
-
-                        &::before {
-
-                            transform: skew(-45deg) translate(225%, -10%);
-                        }
-
-                        .cardTitle::before {
-
-                            width: 100% !important;
-                        }
-                    }
-                }
-
-                .cardImg {
-
-                    aspect-ratio: 16 / 9;
-                }
-
-                .cardOnline, .cardArchive{
-
-                    position: absolute;
-
-                    top: 3%;
-                    left: 3%;
-
-                    background-color: $green;
-
-                    padding: 5px 15px;
-
-                    border-radius: 10px;
-
-                    color: $white;
-                    font-family: 'AudioWide', sans-serif;
-                    font-size: 1rem;
-
-                    box-shadow: 0 0 8px $purple;
-                }
-
-                .cardArchive {
-
-                    background-color: $orange !important;
-                }
-
-                .cardBody {
-
-                    background-color: $purple;
-
-                    padding: 10px;
+                .cardBody--back {
 
                     position: relative;
 
-                    z-index: 0;
+                    width: 100%;
+                    height: 100%;
 
-                    &::before {
+                    padding: 20px;
 
-                        content: "";
-                        
-                        position: absolute;
+                    background-color: $purple;
 
-                        width: 50%;
-                        height: 120%;
-                        z-index: 1;
+                    .cardText--back {
 
-                        opacity: 40%;
-                        background: $white;
+                        width: 100%;
 
-                        transition: 500ms ease-out;
-                        transform: skew(-45deg) translate(-175%, -10%);
-                    }
-
-                    .cardText {
-
-                        .cardTitle {
+                        .cardTitle--back {
 
                             color: $white;
 
@@ -177,7 +338,6 @@
 
                             position: relative;
 
-                            max-width: 50%;
                             width: fit-content;
 
                             z-index: 2;
@@ -185,72 +345,7 @@
                             text-shadow: 0 0 2px $white;
 
                             margin-bottom: 20px;
-
-                            &::before { // underline
-
-                                content: "";
-
-                                position: absolute;
-                                bottom: 8px;
-                                left: 0;
-
-                                width: 0%;
-                                height: 2px;
-
-                                border-radius: 50%;
-                                background-color: $white;
-
-                                box-shadow: 0 0 2px $white;
-
-                                transition: 500ms ease-out;
-                            }
                         }
-
-                        .cardTags {
-
-                            width: 50%;
-
-                            display: flex;
-                            flex-wrap: wrap;
-
-                            gap: 10px;
-
-                            span {
-
-                                background: $hotGradientMovingDiagonal;
-                                animation: gradientMovingDiagonal 20s linear infinite;
-                                background-size: 200% 200%;
-
-                                z-index: 2;
-
-                                padding: 2px 10px;
-
-                                border-radius: 10px;
-
-                                color: $darkPurple;
-
-                                font-family: 'AudioWide', sans-serif;
-                                font-size: 1rem;
-                                text-align: center;
-
-                                box-shadow: 0 0 5px $orange;
-                            }
-                        }
-                    }
-
-                    .cardIcon {
-
-                        position: absolute;
-
-                        bottom: 20px;
-                        right: 20px;
-                        z-index: 2;
-
-                        max-width: 45%;
-                        height: auto;
-                        max-height: 200px;
-
-                        filter: drop-shadow(0 0 3px $darkPurple);
                     }
                 }
             }

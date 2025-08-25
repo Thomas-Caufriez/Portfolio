@@ -5,8 +5,6 @@ console.log('cards.js loaded')
 const container = document.querySelector('.cardsContainer');
 let count = 0;
 
-
-
 // FUNCTIONS
 
 function randomiser() { // get a random number depending on the number of items in $images
@@ -56,26 +54,24 @@ function createCardsOnline(title, image, href, tags = []) { // create the card l
     const tagsLoop = tags.map(tag => `<span>${tag}</span>`).join("\n"); // transform the list into a single string line
 
     createRow(`
-        <a class="card" href="${href}" target="_blank">
-            <img class="cardImg" src="/Assets//images/${image}">
-            <span class="cardOnline">Online</span>
+        <div class="cardContainer cardContainer--online">
+            <a class="card" href="${href}" target="_blank">
 
-            <div class="cardBody">
+                <img class="cardImg" src="/Assets//images/${image}">
+                <span class="cardOnline">Online</span>
 
-                <div class="cardText">
+                <div class="cardBody">
+                    <div class="cardText">
 
-                    <h3 class="cardTitle">${title}</h3>
-                    
-                    <div class="cardTags">
-                        ${tagsLoop}
+                        <h3 class="cardTitle">${title}</h3>
+                        
+                        <div class="cardTags">${tagsLoop}</div>
+
                     </div>
-
+                    <img class="cardIcon" src="/Assets/images/${images[randomiser()]}.svg">
                 </div>
-
-                <img class="cardIcon" src="/Assets/images/${images[randomiser()]}.svg">
-
-            </div>
-        </a>
+            </a>
+        </div>
     `)
 
 }
@@ -85,24 +81,35 @@ function createCardsArchive(title, image, textBehind, tags = []) { // create the
     const tagsLoop = tags.map(tag => `<span>${tag}</span>`).join("\n");
 
     createRow(`
-        <div class="card">
-            <img class="cardImg" src="/Assets//images/${image}">
-            <span class="cardArchive">Archive</span>
+        <div class="cardContainer cardContainer--archive">
+            <div class="card">
+                <div class="front">
+                    <img class="cardImg" src="/Assets//images/${image}">
+                    <span class="cardArchive">Archive</span>
 
-            <div class="cardBody">
+                    <div class="cardBody">
+                        <div class="cardText">
 
-                <div class="cardText">
+                            <h3 class="cardTitle">${title}</h3>
+                            
+                            <div class="cardTags">${tagsLoop}</div>
 
-                    <h3 class="cardTitle">${title}</h3>
-                    
-                    <div class="cardTags">
-                        ${tagsLoop}
+                        </div>
+                        <img class="cardIcon" src="/Assets/images/${images[randomiser()]}.svg">
                     </div>
-
                 </div>
 
-                <img class="cardIcon" src="/Assets/images/${images[randomiser()]}.svg">
+                <div class="back">
+                    <div class="cardBody--back">
+                        <div class="cardText--back">
 
+                            <h3 class="cardTitle--back">${title}</h3>
+                            
+                            <p>${textBehind}</p>
+
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     `)
