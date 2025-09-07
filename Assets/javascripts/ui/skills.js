@@ -28,7 +28,8 @@ skills.forEach((skill) => [
 
 // SKILLS LISTENER
 const btnSkills     = document.querySelectorAll(".btnSkills");
-let btnActive       = document.querySelector(".active");
+let btnActive       = document.querySelector(".selector").querySelector(".active");
+console.log(btnActive);
 const icons         = document.querySelectorAll(".skillIcon");
 
 btnSkills.forEach((btn) => 

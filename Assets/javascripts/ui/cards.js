@@ -57,7 +57,7 @@ function createCardsOnline(title, image, href, tags = []) { // create the card l
         <div class="cardContainer cardContainer--online">
             <a class="card" href="${href}" target="_blank" aria_label="Open project ${title}">
                 <div class="front">
-                    <img class="cardImg" src="/Assets//images/${image}" alt="" aria-hidden="true">
+                    <img class="cardImg" src="./Assets//images/${image}" alt="" aria-hidden="true">
                     <span class="cardOnline">Online</span>
 
                     <div class="cardBody">
@@ -85,7 +85,7 @@ function createCardsArchive(title, image, textBehind, tags = []) { // create the
         <div class="cardContainer cardContainer--archive">
             <div class="card" aria-label="${title} project">
                 <div class="front">
-                    <img class="cardImg" src="/Assets//images/${image}" alt="" aria-hidden="true">
+                    <img class="cardImg" src="./Assets//images/${image}" alt="" aria-hidden="true">
                     <span class="cardArchive">Archive</span>
 
                     <div class="cardBody">
