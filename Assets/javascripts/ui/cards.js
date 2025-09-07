@@ -68,7 +68,7 @@ function createCardsOnline(title, image, href, tags = []) { // create the card l
                             <div class="cardTags">${tagsLoop}</div>
 
                         </div>
-                        <img class="cardIcon" src="/Assets/images/${images[randomiser()]}.svg" alt="" aria-hidden="true">
+                        <img class="cardIcon" src="./Assets/images/${images[randomiser()]}.svg" alt="" aria-hidden="true">
                     </div>
                 </div>
             </a>
@@ -96,7 +96,7 @@ function createCardsArchive(title, image, textBehind, tags = []) { // create the
                             <div class="cardTags">${tagsLoop}</div>
 
                         </div>
-                        <img class="cardIcon" src="/Assets/images/${images[randomiser()]}.svg" alt="" aria-hidden="true">
+                        <img class="cardIcon" src="./Assets/images/${images[randomiser()]}.svg" alt="" aria-hidden="true">
                     </div>
                 </div>
 
