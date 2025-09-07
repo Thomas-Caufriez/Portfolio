@@ -1,0 +1,553 @@
+/// IMPORT FILES
+@use 'variables' as *;
+
+/// CONTENT
+#introSection {
+
+    min-height: 40vh;
+    width: 100%;
+
+    position: relative;
+
+    background: $purpleGradient;
+
+    margin-bottom: 180px;
+
+    @include responsive(mobile) {
+
+        min-height: 50vh;
+    }
+
+    @include responsive(tablet) {
+
+        min-height: 80vh;
+
+        margin-bottom: 270px;
+    }
+
+    @include responsive(desktop) {
+
+        min-height: 100vh;
+
+        margin-bottom: 360px;
+    }
+
+    @include responsive(UHD) {
+
+        margin-bottom: 450px;
+    }
+
+    * { // center every elements based on the top-center
+
+        position: absolute;
+        left: 50%;
+        bottom: 0;
+        transform: translateX(-50%);
+    }
+
+    #sun {
+
+        width: 250px;
+
+        filter: drop-shadow(0 0 4px $orange);
+
+        @include responsive(mobile) {
+
+            width: 350px;
+
+            filter: drop-shadow(0 0 5px $orange);
+        }
+
+        @include responsive(tablet) {
+
+            width: 500px;
+
+            filter: drop-shadow(0 0 6px $orange);
+        }
+
+        @include responsive(desktop) {
+
+            width: 600px;
+
+            filter: drop-shadow(0 0 7px $orange);
+        }
+
+        @include responsive(bigScreen) {
+
+            width: 700px;
+
+            filter: drop-shadow(0 0 8px $orange);
+        }
+
+        @include responsive(UHD) {
+
+            width: 800px;
+
+            filter: drop-shadow(0 0 8px $orange);
+        }
+    }
+
+    #palms {
+
+        width: 200px;
+
+        transform: translate(-50%, 2%) rotateY(180deg);
+
+        filter: drop-shadow(0 0 6px $darkPurple);
+
+        @include responsive(mobile) {
+
+            width: 300px;
+        }
+
+        @include responsive(tablet) {
+
+            width: 400px;
+        }
+
+        @include responsive(desktop) {
+
+            width: 500px;
+        }
+
+        @include responsive(bigScreen) {
+
+            width: 560px;
+        }
+
+        @include responsive(UHD) {
+
+            width: 640px;
+        }
+    }
+
+    #horizon {
+
+        width: 250px;
+        height: auto;
+
+        transform: translate(-50%, 30%);
+
+        filter: blur(5px) drop-shadow(0 0 5px $pink);
+
+        @include responsive(mobile) {
+
+            width: 350px;
+
+            filter: blur(8px) drop-shadow(0 0 5px $pink);
+        }
+
+        @include responsive(tablet) {
+
+            width: 500px;
+
+            filter: blur(10px) drop-shadow(0 0 5px $pink);
+        }
+
+        @include responsive(desktop) {
+
+            width: 600px;
+
+            filter: blur(12px) drop-shadow(0 0 5px $pink);
+        }
+
+        @include responsive(bigScreen) {
+
+            width: 700px;
+
+            filter: blur(14px) drop-shadow(0 0 5px $pink);
+        }
+
+        @include responsive(UHD) {
+
+            width: 800px;
+
+            filter: blur(16px) drop-shadow(0 0 5px $pink);
+        }
+    }
+
+    #grid {
+        
+        width: 100%;
+
+        transform: translate(-50%, 50px);
+
+        @include responsive(mobile) {
+
+            transform: translate(-50%, 75px);
+        }
+
+        @include responsive(tablet) {
+
+            transform: translate(-50%, 130px);
+        }
+
+        @include responsive(desktop) {
+
+            transform: translate(-50%, 160px);
+        }
+
+        @include responsive(bigScreen) {
+
+            transform: translate(-50%, 200px);
+        }
+
+        @include responsive(UHD) {
+
+            transform: translate(-50%, 300px);
+        }
+    }
+
+    #layerBack, #layerFront {
+
+        width: 100%;
+
+        transform: translate(-50%, 55px);
+
+        @include responsive(mobile) {
+
+            transform: translate(-50%, 80px);
+        }
+
+        @include responsive(tablet) {
+
+            transform: translate(-50%, 135px);
+        }
+
+        @include responsive(desktop) {
+
+            transform: translate(-50%, 165px);
+        }
+
+        @include responsive(bigScreen) {
+
+            transform: translate(-50%, 205px);
+        }
+
+        @include responsive(UHD) {
+
+            transform: translate(-50%, 305px);
+        }
+    }
+
+    #layerFront {
+
+        transform: translate(-50%, 60px);
+
+        @include responsive(mobile) {
+
+            transform: translate(-50%, 90px);
+        }
+
+        @include responsive(tablet) {
+
+            transform: translate(-50%, 145px);
+        }
+
+        @include responsive(desktop) {
+
+            transform: translate(-50%, 175px);
+        }
+
+        @include responsive(bigScreen) {
+
+            transform: translate(-50%, 215px);
+        }
+
+        @include responsive(UHD) {
+
+            transform: translate(-50%, 315px);
+        }
+    }
+
+    .star {
+
+        width: 20px;
+        height: auto;
+
+        @include responsive(mobile) {
+
+            width: 24px;
+        }
+
+        @include responsive(tablet) {
+
+            width: 28px;
+        }
+
+        @include responsive(desktop) {
+
+            width: 32px;
+        }
+
+        @include responsive(bigScreen) {
+
+            width: 36px;
+        }
+
+        @include responsive(bigScreen) {
+
+            width: 40px;
+        }
+
+        &#star1 { // half
+
+            top: 30%;
+            left: 10%;
+
+            @include responsive(mobile) {
+
+                top: 25%;
+            }
+
+            @include responsive(tablet) {
+
+                top: 30%;
+            }
+        }
+
+        &#star2 { // half
+
+            top: 5%;
+            left: 25%;
+
+            @include responsive(mobile) {
+
+                top: 0;
+            }
+
+            @include responsive(tablet) {
+
+                top: 5%;
+            }
+        }
+
+        &#star3 { // full
+
+            top: 15%;
+            left: 55%;
+
+            @include responsive(mobile) {
+
+                top: 10%;
+            }
+
+            @include responsive(tablet) {
+
+                top: 15%;
+            }
+        }
+
+        &#star4 { // half
+            
+            top: 25%;
+            left: 80%;
+
+            @include responsive(mobile) {
+
+                top: 20%;
+            }
+
+            @include responsive(tablet) {
+
+                top: 25%;
+            }
+        }
+
+        &#star5 { // full
+
+            top: 5%;
+            left: 90%;
+        }
+    }
+
+    h1 {
+
+        transform: rotate(-5deg);
+
+        width: 100%;
+
+        left: 0;
+        top: 50%;
+
+        span {
+
+            position: absolute;
+
+            &#h1Web { 
+
+                background: $hotGradientVertical;
+                
+                background-clip: text;
+                color: transparent;
+
+                -webkit-text-fill-color: transparent;
+                -webkit-background-clip: text;
+
+                width: fit-content;
+
+                filter: 
+                    drop-shadow(0 0 3px $orange)
+                    drop-shadow(0 0 5px $purple);
+
+                font-family: 'Horsemen', sans-serif;
+                font-weight: 100;
+                font-size: 3rem;
+
+                padding: 15px;
+
+                top: -5px;
+
+                @include responsive(mobile) {
+
+                    font-size: 4rem;
+
+                    padding: 20px;
+
+                    top: -20px;
+                }
+
+                @include responsive(tablet) {
+
+                    font-size: 5rem;
+
+                    top: -10px;
+
+                    padding: 25px;
+                }
+
+                @include responsive(desktop) {
+
+                    font-size: 6rem;
+
+                    padding: 30px;
+
+                    top: 0;
+                }
+
+                @include responsive(bigScreen) {
+
+                    font-size: 7rem;
+
+                    padding: 35px;
+                }
+
+                @include responsive(UHD) {
+
+                    font-size: 8rem;
+
+                    padding: 40px;
+                }
+            }
+
+            &#h1Dev {
+
+                color: $white;
+
+                filter: 
+                    drop-shadow(0 0 5px $pink) 
+                    drop-shadow(0 0 5px $pink) 
+                    drop-shadow(0 0 2px $purple);
+
+                font-family: 'AXROutrunner', sans-serif;
+                font-weight: 100;
+                font-size: 5rem;
+
+                left: calc(50% + 10px);
+                top: 30px;
+                
+
+                @include responsive(mobile) {
+
+                    font-size: 7rem;
+                    
+                    top: 40px;
+                    left: calc(50% + 20px);
+                }
+
+                @include responsive(tablet) {
+
+                    font-size: 8rem;
+                    
+                    top: 60px;
+                    left: calc(50% + 30px);
+                }
+
+                @include responsive(desktop) {
+
+                    font-size: 10rem;
+                    
+                    top: 80px;
+                    left: calc(50% + 40px);
+                }
+
+                @include responsive(bigScreen) {
+
+                    font-size: 12rem;
+                    
+                    top: 100px;
+                    left: calc(50% + 50px);
+                }
+
+                @include responsive(UHD) {
+
+                    font-size: 14rem;
+                    
+                    top: 120px;
+                    left: calc(50% + 60px);
+                }
+            }
+
+            &#h1Name {
+
+                color: $white;
+
+                filter: drop-shadow(0 0 2px $purple);
+
+                text-wrap: nowrap;
+                font-family: 'Torchzilla', sans-serif;
+                font-weight: 100;
+                font-size: 1.5rem; 
+
+                top: -20px;
+                left: calc(50% + 40px);
+
+                @include responsive(mobile) {
+
+                    font-size: 2rem;
+
+                    top: -40px;
+                    left: calc(50% + 60px);
+                }
+
+                @include responsive(tablet) {
+
+                    font-size: 2.5rem;
+
+                    left: calc(50% + 80px);
+                }
+
+                @include responsive(desktop) {
+
+                    font-size: 3rem;
+
+                    left: calc(50% + 100px);
+                }
+
+                @include responsive(bigScreen) {
+
+                    font-size: 3.5rem;
+
+                    left: calc(50% + 120px);
+                }
+
+                @include responsive(UHD) {
+
+                    font-size: 4rem;
+
+                    left: calc(50% + 140px);
+                }
+            }
+        }
+    }
+}

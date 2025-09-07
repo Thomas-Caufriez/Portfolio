@@ -4,7 +4,7 @@ $darkPurple                     : #2A214A;
 $purple                         : #403568;
 $lightPurple                    : #5B4B97;
 
-$purpleGradient                 : linear-gradient(to bottom, $deepPurple 0%, $darkPurple 25%);
+$purpleGradient                 : linear-gradient(to bottom, $deepPurple 0%, $darkPurple 50%);
 
 $pink                           : #DB408E;
 $yellow                         : #FFDC57;
@@ -101,4 +101,33 @@ $white                          : #FEFEFA;
   font-display: swap;
 }
 
-/////
+///// SCREEN SIZE
+$tinyScreen : 0; // default
+$mobile     : 400px;
+$tablet     : 768px;
+$desktop    : 1024px;
+$bigScreen  : 1440px;
+$UHD         : 1980px;
+
+@mixin responsive($breakpoint) {
+
+  @if $breakpoint == mobile {
+    @media (min-width: $mobile) { @content; }
+  }
+
+  @if $breakpoint == tablet {
+    @media (min-width: $tablet) { @content; }
+  }
+
+  @if $breakpoint == desktop {
+    @media (min-width: $desktop) { @content; }
+  }
+
+  @if $breakpoint == bigScreen {
+    @media (min-width: $bigScreen) { @content; }
+  }
+
+  @if $breakpoint == UHD {
+    @media (min-width: $UHD) { @content; }
+  }
+}

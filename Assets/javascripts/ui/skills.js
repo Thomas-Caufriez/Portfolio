@@ -35,7 +35,9 @@ btnSkills.forEach((btn) =>
     btn.addEventListener("click", () => {
 
         btnActive.classList.remove("active");
+        btnActive.setAttribute("aria-pressed", "false");
         btn.classList.add("active");
+        btn.querySelector("button").setAttribute("aria-pressed", "true");
         btnActive = btn;
 
         const skillSelected = btn.querySelector("button").dataset.filter;

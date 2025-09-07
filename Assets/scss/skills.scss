@@ -6,11 +6,13 @@
 .selector {
     
     display: flex;
-    flex-wrap: nowrap;
+    flex-wrap: wrap;
+    flex-direction: row;
     justify-content: space-evenly;
     align-items: center;
+    gap: 20px 10px;
 
-    width: 60%;
+    width: min(100%, 1040px);
 
     margin: 50px 0;
 }
@@ -18,14 +20,20 @@
 .skillsContainer {
 
     display: flex;
+    flex-direction: row;
     flex-wrap: wrap;
     justify-content: center;
-    column-gap: 10rem;
+    column-gap: 5rem;
     row-gap: 4rem;
+    
+    @include responsive(tablet) {
+
+        column-gap: 10rem;
+    }
 
     .skillIcon {
 
-        width: 4.5rem;
+        width: 4rem;
         height: auto;
 
         filter: drop-shadow(0 0 3px $orange);
@@ -37,6 +45,11 @@
             opacity: 0.5;
 
             filter: drop-shadow(0 0 0);
+        }
+
+        @include responsive(tablet) {
+
+            width: 4.5rem;
         }
     }
 }

@@ -55,20 +55,21 @@ function createCardsOnline(title, image, href, tags = []) { // create the card l
 
     createRow(`
         <div class="cardContainer cardContainer--online">
-            <a class="card" href="${href}" target="_blank">
+            <a class="card" href="${href}" target="_blank" aria_label="Open project ${title}">
+                <div class="front">
+                    <img class="cardImg" src="/Assets//images/${image}" alt="" aria-hidden="true">
+                    <span class="cardOnline">Online</span>
 
-                <img class="cardImg" src="/Assets//images/${image}">
-                <span class="cardOnline">Online</span>
+                    <div class="cardBody">
+                        <div class="cardText">
 
-                <div class="cardBody">
-                    <div class="cardText">
+                            <h3 class="cardTitle">${title}</h3>
+                            
+                            <div class="cardTags">${tagsLoop}</div>
 
-                        <h3 class="cardTitle">${title}</h3>
-                        
-                        <div class="cardTags">${tagsLoop}</div>
-
+                        </div>
+                        <img class="cardIcon" src="/Assets/images/${images[randomiser()]}.svg" alt="" aria-hidden="true">
                     </div>
-                    <img class="cardIcon" src="/Assets/images/${images[randomiser()]}.svg">
                 </div>
             </a>
         </div>
@@ -82,9 +83,9 @@ function createCardsArchive(title, image, textBehind, tags = []) { // create the
 
     createRow(`
         <div class="cardContainer cardContainer--archive">
-            <div class="card">
+            <div class="card" aria-label="${title} project">
                 <div class="front">
-                    <img class="cardImg" src="/Assets//images/${image}">
+                    <img class="cardImg" src="/Assets//images/${image}" alt="" aria-hidden="true">
                     <span class="cardArchive">Archive</span>
 
                     <div class="cardBody">
@@ -95,7 +96,7 @@ function createCardsArchive(title, image, textBehind, tags = []) { // create the
                             <div class="cardTags">${tagsLoop}</div>
 
                         </div>
-                        <img class="cardIcon" src="/Assets/images/${images[randomiser()]}.svg">
+                        <img class="cardIcon" src="/Assets/images/${images[randomiser()]}.svg" alt="" aria-hidden="true">
                     </div>
                 </div>
 
@@ -129,15 +130,15 @@ const images = [
 // CARDS
 
 createCardsOnline(
-    "test",
-    "placeholder.png",
-    "#",
-    ["tag", "tag", "Way bigger tag"]
+    "Dynalivres",
+    "dynaLivresCover.png",
+    "https://thomas-caufriez.github.io/Dyna-Livres/",
+    ["Redesign", "Student project"]
 );
 
 createCardsArchive(
-    "test",
-    "placeholder.png",
-    "lorem ipsum",
-    ["tag", "tag", "Way bigger tag"]
+    "Cookup",
+    "cookupCover.png",
+    "Cookup was my second website. First time with WordPress and was a cooking website where users were able to post their own recipes (with a verification from an admin)",
+    ["Wordpress", "Student project"]
 );

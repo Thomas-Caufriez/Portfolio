@@ -1,0 +1,76 @@
+/// IMPORT FILES
+@use 'variables' as *;
+
+// CONTENT
+
+.row {
+
+    .h2 {
+
+        font-size: 1rem !important;
+    }
+}
+
+form {
+
+    width: 60%;
+    height: auto;
+
+    .row {
+
+        justify-content: space-evenly;
+
+        margin-top: 50px;
+        
+        gap: 50px;
+
+        @include responsive(tablet) {
+
+            gap: 6rem;
+        }
+
+        .inputGroup {
+
+            display: flex;
+            flex-direction: column;
+            
+            width: 100%;
+
+            label, input, textarea {
+
+                font-size: 1rem;
+                font-family: 'Raleway', sans-serif;
+
+                text-align: left;
+
+                color: $white;
+            }
+
+            label {
+
+                font-size: 1.25rem;
+
+                margin-bottom: 10px;
+            }
+
+            input, textarea {
+
+                border: 1px solid transparent;
+                border-radius: 10px;
+                background-image: 
+                    linear-gradient($purple, $purple),
+                    $hotGradientHorizontal;
+                background-origin: border-box;
+                background-clip: padding-box, border-box;
+
+                padding: 10px;
+
+                width: 100%;
+
+                color: $white;
+
+                box-shadow: 0 0 5px $orange;
+            }
+        }
+    }
+}

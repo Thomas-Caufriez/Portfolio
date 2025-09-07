@@ -1,0 +1,99 @@
+/// IMPORT FILES
+@use 'variables' as *;
+
+/// CONTENT
+nav.sidebar  {
+    
+    display: none;
+
+    position: fixed;
+    transform: translateY(-50%);
+    top: 50%;
+    left: 20px;
+
+    z-index: 10;
+        
+    background-color: $purple;
+    
+    padding: 10px;
+
+    border-radius: 100px;
+
+    box-shadow: 0 0 2px $deepPurple;
+
+    @include responsive(desktop) {
+
+        display: flex;
+    }
+
+    ul {
+
+        display: flex;
+        flex-direction: column;
+        gap: 1.2rem;
+
+        position: relative;
+
+        &::after {
+
+            content: "";
+            
+            position: absolute;
+            transform: translateX(-50%);
+            top: calc(100% + 1.7rem);
+            left: 50%;
+
+            width: 5px;
+            height: 100px;
+            border-radius: 100px;
+
+            background: $hotGradientDiagonal;
+
+            box-shadow: 0 0 5px $orange;
+        }
+
+        li {
+            
+            aspect-ratio: 1/1;
+
+            padding: 15px;
+            transition: 0.3s ease-out;
+
+            border-radius: 100px;
+
+            a {
+
+                font-size: 1.6rem;
+
+                background: $hotGradientDiagonal;
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+                background-clip: text;
+                color: transparent;
+                
+                filter: drop-shadow(0 0 2px $orange);
+
+                display: flex;
+                align-items: center;
+                justify-content: center;
+
+                transition: 0.3s ease-in-out;
+
+                &:hover {
+
+                    transform: scale(1.2);
+                }
+            }
+
+            &:has(.active) {
+
+                background-color: $darkPurple;
+
+                a {
+
+                    transform: scale(1.2);
+                }
+            }
+        }
+    }
+}

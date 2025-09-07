@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 2000 569">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: url(#Dégradé_sans_nom_42);
+      }
+
+      .cls-2 {
+        fill: none;
+        stroke: #2fabd9;
+        stroke-miterlimit: 10;
+      }
+    </style>
+    <linearGradient id="Dégradé_sans_nom_42" data-name="Dégradé sans nom 42" x1="976.83" y1="0" x2="976.83" y2="297" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#2a214a"/>
+      <stop offset=".2" stop-color="#261e43" stop-opacity=".92"/>
+      <stop offset=".48" stop-color="#1c1632" stop-opacity=".68"/>
+      <stop offset=".8" stop-color="#0c0915" stop-opacity=".29"/>
+      <stop offset="1" stop-color="#000" stop-opacity="0"/>
+    </linearGradient>
+  </defs>
+  <g id="Calque_1" data-name="Calque 1">
+    <g>
+      <polygon class="cls-2" points="-168 27 2112 27 6972 1134 -5028 1134 -168 27"/>
+      <line class="cls-2" x1="-2535.69" y1="566.31" x2="4479.69" y2="566.31"/>
+      <line class="cls-2" x1="-2308.58" y1="514.58" x2="4252.58" y2="514.58"/>
+      <line class="cls-2" x1="-2109.08" y1="469.14" x2="4053.08" y2="469.14"/>
+      <line class="cls-2" x1="-1932.46" y1="428.9" x2="3876.46" y2="428.9"/>
+      <line class="cls-2" x1="-1774.99" y1="393.04" x2="3718.99" y2="393.04"/>
+      <line class="cls-2" x1="-1633.71" y1="360.86" x2="3577.71" y2="360.86"/>
+      <line class="cls-2" x1="-1506.26" y1="331.83" x2="3450.26" y2="331.83"/>
+      <line class="cls-2" x1="-1390.69" y1="305.5" x2="3334.69" y2="305.5"/>
+      <line class="cls-2" x1="-1285.43" y1="281.52" x2="3229.43" y2="281.52"/>
+      <line class="cls-2" x1="-1189.14" y1="259.59" x2="3133.14" y2="259.59"/>
+      <line class="cls-2" x1="-1100.73" y1="239.45" x2="3044.73" y2="239.45"/>
+      <line class="cls-2" x1="-1019.27" y1="220.9" x2="2963.27" y2="220.9"/>
+      <line class="cls-2" x1="-943.97" y1="203.75" x2="2887.97" y2="203.75"/>
+      <line class="cls-2" x1="-874.15" y1="187.85" x2="2818.15" y2="187.85"/>
+      <line class="cls-2" x1="-809.25" y1="173.06" x2="2753.25" y2="173.06"/>
+      <line class="cls-2" x1="-748.76" y1="159.28" x2="2692.76" y2="159.28"/>
+      <line class="cls-2" x1="-692.23" y1="146.41" x2="2636.23" y2="146.41"/>
+      <line class="cls-2" x1="-639.31" y1="134.35" x2="2583.31" y2="134.35"/>
+      <line class="cls-2" x1="-589.64" y1="123.04" x2="2533.64" y2="123.04"/>
+      <line class="cls-2" x1="-542.95" y1="112.41" x2="2486.95" y2="112.41"/>
+      <line class="cls-2" x1="-498.97" y1="102.39" x2="2442.97" y2="102.39"/>
+      <line class="cls-2" x1="-457.47" y1="92.93" x2="2401.47" y2="92.93"/>
+      <line class="cls-2" x1="-418.24" y1="84" x2="2362.24" y2="84"/>
+      <line class="cls-2" x1="-381.12" y1="75.54" x2="2325.12" y2="75.54"/>
+      <line class="cls-2" x1="-345.92" y1="67.53" x2="2289.92" y2="67.53"/>
+      <line class="cls-2" x1="-312.51" y1="59.92" x2="2256.51" y2="59.92"/>
+      <line class="cls-2" x1="-280.75" y1="52.68" x2="2224.75" y2="52.68"/>
+      <line class="cls-2" x1="-250.52" y1="45.8" x2="2194.52" y2="45.8"/>
+      <line class="cls-2" x1="-221.72" y1="39.24" x2="2165.72" y2="39.24"/>
+      <line class="cls-2" x1="-194.24" y1="32.98" x2="2138.24" y2="32.98"/>
+      <line class="cls-2" x1="1985.33" y1="27" x2="6305.33" y2="1134"/>
+      <line class="cls-2" x1="1922" y1="27" x2="5972" y2="1134"/>
+      <line class="cls-2" x1="1858.67" y1="27" x2="5638.67" y2="1134"/>
+      <line class="cls-2" x1="1795.33" y1="27" x2="5305.33" y2="1134"/>
+      <line class="cls-2" x1="1732" y1="27" x2="4972" y2="1134"/>
+      <line class="cls-2" x1="1668.67" y1="27" x2="4638.67" y2="1134"/>
+      <line class="cls-2" x1="1605.33" y1="27" x2="4305.33" y2="1134"/>
+      <line class="cls-2" x1="1542" y1="27" x2="3972" y2="1134"/>
+      <line class="cls-2" x1="1478.67" y1="27" x2="3638.67" y2="1134"/>
+      <line class="cls-2" x1="1415.33" y1="27" x2="3305.33" y2="1134"/>
+      <line class="cls-2" x1="1352" y1="27" x2="2972" y2="1134"/>
+      <line class="cls-2" x1="1288.67" y1="27" x2="2638.67" y2="1134"/>
+      <line class="cls-2" x1="1225.33" y1="27" x2="2305.33" y2="1134"/>
+      <line class="cls-2" x1="1162" y1="27" x2="1972" y2="1134"/>
+      <line class="cls-2" x1="1098.67" y1="27" x2="1638.67" y2="1134"/>
+      <line class="cls-2" x1="1035.33" y1="27" x2="1305.33" y2="1134"/>
+      <line class="cls-2" x1="972" y1="27" x2="972" y2="1134"/>
+      <line class="cls-2" x1="908.67" y1="27" x2="638.67" y2="1134"/>
+      <line class="cls-2" x1="845.33" y1="27" x2="305.33" y2="1134"/>
+      <line class="cls-2" x1="782" y1="27" x2="-28" y2="1134"/>
+      <line class="cls-2" x1="718.67" y1="27" x2="-361.33" y2="1134"/>
+      <line class="cls-2" x1="655.33" y1="27" x2="-694.67" y2="1134"/>
+      <line class="cls-2" x1="592" y1="27" x2="-1028" y2="1134"/>
+      <line class="cls-2" x1="528.67" y1="27" x2="-1361.33" y2="1134"/>
+      <line class="cls-2" x1="465.33" y1="27" x2="-1694.67" y2="1134"/>
+      <line class="cls-2" x1="402" y1="27" x2="-2028" y2="1134"/>
+      <line class="cls-2" x1="338.67" y1="27" x2="-2361.33" y2="1134"/>
+      <line class="cls-2" x1="275.33" y1="27" x2="-2694.67" y2="1134"/>
+      <line class="cls-2" x1="212" y1="27" x2="-3028" y2="1134"/>
+      <line class="cls-2" x1="148.67" y1="27" x2="-3361.33" y2="1134"/>
+      <line class="cls-2" x1="85.33" y1="27" x2="-3694.67" y2="1134"/>
+      <line class="cls-2" x1="22" y1="27" x2="-4028" y2="1134"/>
+    </g>
+  </g>
+  <g id="Calque_2" data-name="Calque 2">
+    <rect class="cls-1" x="-71.67" width="2097" height="297"/>
+  </g>
+</svg>

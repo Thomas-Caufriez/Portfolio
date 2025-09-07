@@ -8,9 +8,19 @@
     position: absolute;
     top: 0;
     left: 0;
-    width: 100%;
+    width: 300%;
     overflow: hidden;
     line-height: 0;
+
+    @include responsive(tablet) {
+
+        width: 200%;
+    }
+
+    @include responsive(desktop) {
+
+        width: 100%;
+    }
 
     svg {
 
@@ -32,10 +42,20 @@
     position: absolute;
     bottom: 0;
     left: 0;
-    width: 100%;
+    width: 300%;
     overflow: hidden;
     line-height: 0;
     transform: rotate(180deg);
+
+    @include responsive(tablet) {
+
+        width: 200%;
+    }
+
+    @include responsive(desktop) {
+
+        width: 100%;
+    }
 
     svg {
 
@@ -63,7 +83,7 @@
         flex-direction: column;
         row-gap: 4rem;
 
-        padding: 50px 0 0 0;
+        margin-top: 50px;
 
         width: 100%;
 
@@ -74,21 +94,23 @@
             flex-wrap: wrap;
             row-gap: 4rem;
 
-            align-items: flex-start;
-
-            
+            align-items: center;
         }
     }
-}
-
-// CARDS
+}// CARDS
 
 .cardContainer { //general
 
-    width: 340px;
+    width: 340px; // I very dislike this way of doing it because the cards does not have their own height depending on their content but I have to because of the flip
     height: 345px;
 
     transition: 500ms ease-out;
+
+    @include responsive(littleMobile) {
+
+        width: 300px;
+        height: 320px;
+    }
 
     .card {
 
@@ -96,6 +118,14 @@
         height: 100%;
 
         position: relative;
+
+        .front {
+
+            width: 100%;
+            height: 100%;
+
+            position: relative;
+        }
 
         .cardImg {
 
@@ -185,6 +215,8 @@
                         text-align: center;
 
                         box-shadow: 0 0 5px $orange;
+
+                        text-wrap: nowrap;
                     }
                 }
             }
@@ -193,8 +225,8 @@
 
                 position: absolute;
 
-                bottom: 20px;
-                right: 20px;
+                bottom: 10px;
+                right: 10px;
                 z-index: 2;
 
                 max-width: 45%;
@@ -202,6 +234,13 @@
                 max-height: 200px;
 
                 filter: drop-shadow(0 0 3px $darkPurple);
+
+                display: none;
+
+                @include responsive(tablet) {
+
+                    display: block;
+                }
             }
         }
     }
@@ -252,6 +291,13 @@
 
                 transition: 500ms ease-out;
                 transform: skew(-45deg) translate(-200%, -10%);
+
+                display: none;
+
+                @include responsive(tablet) {
+
+                    display: block;
+                }
             }
 
             .cardTitle {
@@ -273,6 +319,13 @@
                     box-shadow: 0 0 2px $white;
 
                     transition: 500ms ease-out;
+
+                    display: none;
+
+                    @include responsive(tablet) {
+
+                        display: block;
+                    }
                 }
             }
         }
@@ -294,6 +347,7 @@
             transition: transform 1500ms;
             transform-style: preserve-3d;
 
+
             .front, .back {
 
                 width: 100%;
@@ -308,6 +362,8 @@
                 overflow: hidden;
 
                 box-shadow: 0 0 20px $purple;
+
+                object-fit: contain;
             }
 
             .back {
