@@ -142,3 +142,10 @@ createCardsOnline(
     "https://cookup.emu.isfsc.be/",
     ["Wordpress", "Student project"]
 );
+
+createCardsArchive(
+    "Au-plaisir",
+    "auPlaisir.png",
+    "Made during my 2nd school year internship. I was tasked to migrate a website to my master of internship's WordPress template with the possibility for the client to change anything whenever they want",
+    ["Wordpress", "Internship project"]
+);
