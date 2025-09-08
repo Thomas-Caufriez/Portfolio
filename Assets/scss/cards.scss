@@ -27,7 +27,7 @@
         position: relative;
         display: block;
         width: calc(102% + 1.3px);
-        height: 107px;
+        height: 100px;
     }
 
     .shape-fill {
@@ -76,6 +76,8 @@
 #cardSection {
 
     background-color: $lightPurple;
+
+    padding: 120px 0;
 
     .cardsContainer {
 

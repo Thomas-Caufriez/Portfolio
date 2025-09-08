@@ -105,7 +105,6 @@ table {
   width: 100%;
   min-height: 100vh;
   position: relative;
-  padding: 180px 0;
 }
 
 .content {
@@ -600,7 +599,7 @@ nav.sidebar ul li:has(.active) a {
   position: relative;
   display: block;
   width: calc(102% + 1.3px);
-  height: 107px;
+  height: 100px;
 }
 .custom-shape-divider-top-card .shape-fill {
   fill: #2A214A;
@@ -637,6 +636,7 @@ nav.sidebar ul li:has(.active) a {
 
 #cardSection {
   background-color: #5B4B97;
+  padding: 120px 0;
 }
 #cardSection .cardsContainer {
   display: flex;
