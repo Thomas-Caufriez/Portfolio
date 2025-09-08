@@ -103,8 +103,9 @@ table {
 }
 .container {
   width: 100%;
-  min-height: 100vh;
+  min-height: 80vh;
   position: relative;
+  padding: 180px 0;
 }
 
 .content {
@@ -636,7 +637,6 @@ nav.sidebar ul li:has(.active) a {
 
 #cardSection {
   background-color: #5B4B97;
-  padding: 120px 0;
 }
 #cardSection .cardsContainer {
   display: flex;
