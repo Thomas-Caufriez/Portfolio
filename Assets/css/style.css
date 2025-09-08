@@ -226,7 +226,7 @@ nav.sidebar {
   border-radius: 100px;
   box-shadow: 0 0 2px #18132A;
 }
-@media (min-width: 1024px) {
+@media (min-width: 1440px) {
   nav.sidebar {
     display: flex;
   }

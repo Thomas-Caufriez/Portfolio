@@ -136,9 +136,9 @@ createCardsOnline(
     ["Redesign", "Student project"]
 );
 
-createCardsArchive(
+createCardsOnline(
     "Cookup",
     "cookupCover.png",
-    "Cookup was my second website. First time with WordPress and was a cooking website where users were able to post their own recipes (with a verification from an admin)",
+    "https://cookup.emu.isfsc.be/",
     ["Wordpress", "Student project"]
 );
