@@ -845,6 +845,12 @@ nav.sidebar ul li:has(.active) a {
     padding: 35px;
   }
 }
+@media (min-width: 1920px) {
+  #introSection h1 span#h1Web {
+    font-size: 8rem;
+    padding: 40px;
+  }
+}
 #introSection h1 span#h1Dev {
   color: #FEFEFA;
   filter: drop-shadow(0 0 5px #DB408E) drop-shadow(0 0 5px #DB408E) drop-shadow(0 0 2px #403568);
@@ -878,6 +884,12 @@ nav.sidebar ul li:has(.active) a {
     top: 100px;
   }
 }
+@media (min-width: 1920px) {
+  #introSection h1 span#h1Dev {
+    font-size: 14rem;
+    top: 120px;
+  }
+}
 #introSection h1 span#h1Name {
   color: #FEFEFA;
   filter: drop-shadow(0 0 2px #403568);
@@ -907,6 +919,12 @@ nav.sidebar ul li:has(.active) a {
 @media (min-width: 1440px) {
   #introSection h1 span#h1Name {
     font-size: 3.5rem;
+  }
+}
+@media (min-width: 1920px) {
+  #introSection h1 span#h1Name {
+    font-size: 4rem;
+    left: 58%;
   }
 }
 

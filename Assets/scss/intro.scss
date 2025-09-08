@@ -266,6 +266,13 @@
 
                     padding: 35px;
                 }
+
+                @include responsive(FHD) {
+
+                    font-size: 8rem;
+
+                    padding: 40px;
+                }
             }
 
             &#h1Dev {
@@ -312,6 +319,13 @@
                     
                     top: 100px;
                 }
+
+                @include responsive(FHD) {
+                    
+
+                    font-size: 14rem;
+                    top: 120px;
+                }
             }
 
             &#h1Name {
@@ -348,6 +362,12 @@
                 @include responsive(bigScreen) {
 
                     font-size: 3.5rem;
+                }
+
+                @include responsive(FHD) {
+
+                    font-size: 4rem;
+                    left: 58%;
                 }
             }
         }
