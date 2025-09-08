@@ -99,16 +99,6 @@
 
             filter: blur(12px) drop-shadow(0 0 5px $pink);
         }
-
-        @include responsive(FHD) {
-
-            filter: blur(14px) drop-shadow(0 0 5px $pink);
-        }
-
-        @include responsive(UHD) {
-
-            filter: blur(16px) drop-shadow(0 0 5px $pink);
-        }
     }
 
     #grid {
@@ -143,16 +133,6 @@
         @include  responsive (bigScreen) {
 
             width: 2.5rem;
-        }
-
-        @include  responsive (FHD) {
-
-            width: 3rem;
-        }
-
-        @include  responsive (UHD) {
-
-            width: 3.5rem;
         }
 
         &#star1 { // half
@@ -286,20 +266,6 @@
 
                     padding: 35px;
                 }
-
-                @include responsive(FHD) {
-
-                    font-size: 12rem;
-
-                    padding: 40px;
-                }
-
-                @include responsive(UHD) {
-
-                    font-size: 16rem;
-
-                    padding: 70px;
-                }
             }
 
             &#h1Dev {
@@ -346,20 +312,6 @@
                     
                     top: 100px;
                 }
-
-                @include responsive(FHD) {
-
-                    font-size: 18rem;
-                    
-                    top: 180px;
-                }
-
-                @include responsive(UHD) {
-
-                    font-size: 22rem;
-                    
-                    top: 260px;
-                }
             }
 
             &#h1Name {
@@ -374,14 +326,13 @@
                 font-size: 1.5rem; 
 
                 top: -20px;
-                left: calc(50% + 40px);
+                left: 60%;
 
                 @include responsive(mobile) {
 
                     font-size: 2rem;
 
                     top: -40px;
-                    left: 65%;
                 }
 
                 @include responsive(tablet) {
@@ -397,18 +348,6 @@
                 @include responsive(bigScreen) {
 
                     font-size: 3.5rem;
-                }
-
-                @include responsive(FHD) {
-
-                    font-size: 5rem;
-
-                    top: -60px;
-                }
-
-                @include responsive(UHD) {
-
-                    font-size: 7rem;
                 }
             }
         }

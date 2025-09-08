@@ -720,16 +720,6 @@ nav.sidebar ul li:has(.active) a {
     filter: blur(12px) drop-shadow(0 0 5px #DB408E);
   }
 }
-@media (min-width: 1920px) {
-  #introSection #horizon {
-    filter: blur(14px) drop-shadow(0 0 5px #DB408E);
-  }
-}
-@media (min-width: 2560px) {
-  #introSection #horizon {
-    filter: blur(16px) drop-shadow(0 0 5px #DB408E);
-  }
-}
 #introSection #grid {
   width: 100%;
   transform: translate(-50%, 70%);
@@ -753,16 +743,6 @@ nav.sidebar ul li:has(.active) a {
 @media (min-width: 1440px) {
   #introSection .star {
     width: 2.5rem;
-  }
-}
-@media (min-width: 1920px) {
-  #introSection .star {
-    width: 3rem;
-  }
-}
-@media (min-width: 2560px) {
-  #introSection .star {
-    width: 3.5rem;
   }
 }
 #introSection .star#star1 {
@@ -865,18 +845,6 @@ nav.sidebar ul li:has(.active) a {
     padding: 35px;
   }
 }
-@media (min-width: 1920px) {
-  #introSection h1 span#h1Web {
-    font-size: 12rem;
-    padding: 40px;
-  }
-}
-@media (min-width: 2560px) {
-  #introSection h1 span#h1Web {
-    font-size: 16rem;
-    padding: 70px;
-  }
-}
 #introSection h1 span#h1Dev {
   color: #FEFEFA;
   filter: drop-shadow(0 0 5px #DB408E) drop-shadow(0 0 5px #DB408E) drop-shadow(0 0 2px #403568);
@@ -910,18 +878,6 @@ nav.sidebar ul li:has(.active) a {
     top: 100px;
   }
 }
-@media (min-width: 1920px) {
-  #introSection h1 span#h1Dev {
-    font-size: 18rem;
-    top: 180px;
-  }
-}
-@media (min-width: 2560px) {
-  #introSection h1 span#h1Dev {
-    font-size: 22rem;
-    top: 260px;
-  }
-}
 #introSection h1 span#h1Name {
   color: #FEFEFA;
   filter: drop-shadow(0 0 2px #403568);
@@ -930,13 +886,12 @@ nav.sidebar ul li:has(.active) a {
   font-weight: 100;
   font-size: 1.5rem;
   top: -20px;
-  left: calc(50% + 40px);
+  left: 60%;
 }
 @media (min-width: 400px) {
   #introSection h1 span#h1Name {
     font-size: 2rem;
     top: -40px;
-    left: 65%;
   }
 }
 @media (min-width: 768px) {
@@ -952,17 +907,6 @@ nav.sidebar ul li:has(.active) a {
 @media (min-width: 1440px) {
   #introSection h1 span#h1Name {
     font-size: 3.5rem;
-  }
-}
-@media (min-width: 1920px) {
-  #introSection h1 span#h1Name {
-    font-size: 5rem;
-    top: -60px;
-  }
-}
-@media (min-width: 2560px) {
-  #introSection h1 span#h1Name {
-    font-size: 7rem;
   }
 }
 
