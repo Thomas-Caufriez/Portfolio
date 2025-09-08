@@ -4,37 +4,30 @@
 /// CONTENT
 #introSection {
 
-    min-height: 40vh;
+    min-height: 40vh !important;
     width: 100%;
 
     position: relative;
 
     background: $purpleGradient;
 
-    margin-bottom: 180px;
+    margin-bottom: 40% !important;
 
     @include responsive(mobile) {
 
-        min-height: 50vh;
+        min-height: 50vh !important;
     }
 
     @include responsive(tablet) {
 
-        min-height: 80vh;
+        min-height: 80vh !important;
 
-        margin-bottom: 270px;
     }
 
     @include responsive(desktop) {
 
-        min-height: 100vh;
+        min-height: 100vh !important;
 
-        margin-bottom: 360px;
-    }
-
-    @include responsive(UHD) {
-
-        margin-bottom: 450px;
     }
 
     * { // center every elements based on the top-center
@@ -47,120 +40,72 @@
 
     #sun {
 
-        width: 250px;
+        width: 80%;
+        max-height: 80%;
 
-        filter: drop-shadow(0 0 4px $orange);
-
-        @include responsive(mobile) {
-
-            width: 350px;
-
-            filter: drop-shadow(0 0 5px $orange);
-        }
+        filter: drop-shadow(0 0 0.8rem $orange);
 
         @include responsive(tablet) {
 
-            width: 500px;
-
-            filter: drop-shadow(0 0 6px $orange);
-        }
-
-        @include responsive(desktop) {
-
-            width: 600px;
-
-            filter: drop-shadow(0 0 7px $orange);
-        }
-
-        @include responsive(bigScreen) {
-
-            width: 700px;
-
-            filter: drop-shadow(0 0 8px $orange);
-        }
-
-        @include responsive(UHD) {
-
-            width: 800px;
-
-            filter: drop-shadow(0 0 8px $orange);
+            width: 60%;
         }
     }
 
     #palms {
 
-        width: 200px;
+        width: 65%;
+        max-height: 75%;
 
         transform: translate(-50%, 2%) rotateY(180deg);
 
-        filter: drop-shadow(0 0 6px $darkPurple);
-
-        @include responsive(mobile) {
-
-            width: 300px;
-        }
-
-        @include responsive(tablet) {
-
-            width: 400px;
-        }
+        filter: drop-shadow(0 0 0.8rem $darkPurple);
 
         @include responsive(desktop) {
 
-            width: 500px;
+            max-height: 70%;
         }
 
         @include responsive(bigScreen) {
 
-            width: 560px;
-        }
-
-        @include responsive(UHD) {
-
-            width: 640px;
+            max-height: 75%;
         }
     }
 
     #horizon {
 
-        width: 250px;
+        width: 50%;
         height: auto;
 
         transform: translate(-50%, 30%);
 
-        filter: blur(5px) drop-shadow(0 0 5px $pink);
+        filter: blur(4px) drop-shadow(0 0 5px $pink);
 
         @include responsive(mobile) {
 
-            width: 350px;
-
-            filter: blur(8px) drop-shadow(0 0 5px $pink);
+            filter: blur(6px) drop-shadow(0 0 5px $pink);
         }
 
         @include responsive(tablet) {
 
-            width: 500px;
-
-            filter: blur(10px) drop-shadow(0 0 5px $pink);
+            filter: blur(8px) drop-shadow(0 0 5px $pink);
         }
 
         @include responsive(desktop) {
 
-            width: 600px;
-
-            filter: blur(12px) drop-shadow(0 0 5px $pink);
+            filter: blur(10px) drop-shadow(0 0 5px $pink);
         }
 
         @include responsive(bigScreen) {
 
-            width: 700px;
+            filter: blur(12px) drop-shadow(0 0 5px $pink);
+        }
+
+        @include responsive(FHD) {
 
             filter: blur(14px) drop-shadow(0 0 5px $pink);
         }
 
         @include responsive(UHD) {
-
-            width: 800px;
 
             filter: blur(16px) drop-shadow(0 0 5px $pink);
         }
@@ -170,124 +115,44 @@
         
         width: 100%;
 
-        transform: translate(-50%, 50px);
-
-        @include responsive(mobile) {
-
-            transform: translate(-50%, 75px);
-        }
-
-        @include responsive(tablet) {
-
-            transform: translate(-50%, 130px);
-        }
-
-        @include responsive(desktop) {
-
-            transform: translate(-50%, 160px);
-        }
-
-        @include responsive(bigScreen) {
-
-            transform: translate(-50%, 200px);
-        }
-
-        @include responsive(UHD) {
-
-            transform: translate(-50%, 300px);
-        }
+        transform: translate(-50%, 70%);
     }
 
     #layerBack, #layerFront {
 
         width: 100%;
 
-        transform: translate(-50%, 55px);
-
-        @include responsive(mobile) {
-
-            transform: translate(-50%, 80px);
-        }
-
-        @include responsive(tablet) {
-
-            transform: translate(-50%, 135px);
-        }
-
-        @include responsive(desktop) {
-
-            transform: translate(-50%, 165px);
-        }
-
-        @include responsive(bigScreen) {
-
-            transform: translate(-50%, 205px);
-        }
-
-        @include responsive(UHD) {
-
-            transform: translate(-50%, 305px);
-        }
+        transform: translate(-50%, 70%);
     }
 
     #layerFront {
 
-        transform: translate(-50%, 60px);
-
-        @include responsive(mobile) {
-
-            transform: translate(-50%, 90px);
-        }
-
-        @include responsive(tablet) {
-
-            transform: translate(-50%, 145px);
-        }
-
-        @include responsive(desktop) {
-
-            transform: translate(-50%, 175px);
-        }
-
-        @include responsive(bigScreen) {
-
-            transform: translate(-50%, 215px);
-        }
-
-        @include responsive(UHD) {
-
-            transform: translate(-50%, 315px);
-        }
+        transform: translate(-50%, 80%);
     }
 
     .star {
 
-        width: 20px;
+        width: 1.5rem;
         height: auto;
 
-        @include responsive(mobile) {
+        @include  responsive (tablet) {
 
-            width: 24px;
+            width: 2rem;
         }
 
-        @include responsive(tablet) {
+        @include  responsive (bigScreen) {
 
-            width: 28px;
+            width: 2.5rem;
         }
 
-        @include responsive(desktop) {
+        @include  responsive (FHD) {
 
-            width: 32px;
+            width: 3rem;
         }
 
-        @include responsive(bigScreen) {
+        @include  responsive (UHD) {
 
-            width: 36px;
-        }
-
-        @include responsive(bigScreen) {
-
-            width: 40px;
+            width: 3.5rem;
         }
 
         &#star1 { // half
@@ -324,18 +189,8 @@
 
         &#star3 { // full
 
-            top: 15%;
+            top: 10%;
             left: 55%;
-
-            @include responsive(mobile) {
-
-                top: 10%;
-            }
-
-            @include responsive(tablet) {
-
-                top: 15%;
-            }
         }
 
         &#star4 { // half
@@ -432,11 +287,18 @@
                     padding: 35px;
                 }
 
-                @include responsive(UHD) {
+                @include responsive(FHD) {
 
-                    font-size: 8rem;
+                    font-size: 12rem;
 
                     padding: 40px;
+                }
+
+                @include responsive(UHD) {
+
+                    font-size: 16rem;
+
+                    padding: 70px;
                 }
             }
 
@@ -453,7 +315,7 @@
                 font-weight: 100;
                 font-size: 5rem;
 
-                left: calc(50% + 10px);
+                left: 55%;
                 top: 30px;
                 
 
@@ -462,7 +324,6 @@
                     font-size: 7rem;
                     
                     top: 40px;
-                    left: calc(50% + 20px);
                 }
 
                 @include responsive(tablet) {
@@ -470,7 +331,6 @@
                     font-size: 8rem;
                     
                     top: 60px;
-                    left: calc(50% + 30px);
                 }
 
                 @include responsive(desktop) {
@@ -478,7 +338,6 @@
                     font-size: 10rem;
                     
                     top: 80px;
-                    left: calc(50% + 40px);
                 }
 
                 @include responsive(bigScreen) {
@@ -486,15 +345,20 @@
                     font-size: 12rem;
                     
                     top: 100px;
-                    left: calc(50% + 50px);
+                }
+
+                @include responsive(FHD) {
+
+                    font-size: 18rem;
+                    
+                    top: 180px;
                 }
 
                 @include responsive(UHD) {
 
-                    font-size: 14rem;
+                    font-size: 22rem;
                     
-                    top: 120px;
-                    left: calc(50% + 60px);
+                    top: 260px;
                 }
             }
 
@@ -517,35 +381,34 @@
                     font-size: 2rem;
 
                     top: -40px;
-                    left: calc(50% + 60px);
+                    left: 65%;
                 }
 
                 @include responsive(tablet) {
 
                     font-size: 2.5rem;
-
-                    left: calc(50% + 80px);
                 }
 
                 @include responsive(desktop) {
 
                     font-size: 3rem;
-
-                    left: calc(50% + 100px);
                 }
 
                 @include responsive(bigScreen) {
 
                     font-size: 3.5rem;
+                }
 
-                    left: calc(50% + 120px);
+                @include responsive(FHD) {
+
+                    font-size: 5rem;
+
+                    top: -60px;
                 }
 
                 @include responsive(UHD) {
 
-                    font-size: 4rem;
-
-                    left: calc(50% + 140px);
+                    font-size: 7rem;
                 }
             }
         }
