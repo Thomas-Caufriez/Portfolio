@@ -13,8 +13,13 @@
 
 form {
 
-    width: 60%;
+    width: 80%;
     height: auto;
+
+    @include responsive(tablet) {
+
+        width: 60%;
+    }
 
     .row {
 

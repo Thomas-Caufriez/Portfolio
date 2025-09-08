@@ -1,0 +1,24 @@
+/// IMPORT FILES
+@use 'variables' as *;
+
+/// CONTENT
+#bioSection {
+
+    .horsemen {
+
+        font-family: 'horsemen', sans-serif;
+        font-weight: 100;
+
+        padding: 10px;
+
+        &::before {
+
+            display: none;
+        }
+
+        &::after {
+
+            padding: 10px;
+        }
+    }
+}
