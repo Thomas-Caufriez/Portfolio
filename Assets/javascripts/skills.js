@@ -5,9 +5,7 @@ console.log('skills.js loaded')
 const skills = [
 
     { src: "./Assets/images/bootstrap.svg", alt: "Bootstrap icon", category: "front"},
-    { src: "./Assets/images/html.svg", alt: "HTML icon", category: "front"},
     { src: "./Assets/images/js.svg", alt: "Javascript icon", category: "front"},
-    { src: "./Assets/images/sass.svg", alt: "Sass icon", category: "front"},
     { src: "./Assets/images/php.svg", alt: "PHP icon", category: "back"},
     { src: "./Assets/images/python.svg", alt: "Python icon", category: "back"},
     { src: "./Assets/images/wordpress.svg", alt: "WordPress icon", category: "back"},

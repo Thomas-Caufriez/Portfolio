@@ -283,7 +283,7 @@ nav.sidebar ul li:has(.active) a {
   width: 100%;
   position: relative;
   background: linear-gradient(to bottom, #18132A 0%, #2A214A 50%);
-  margin-bottom: 40% !important;
+  margin-bottom: 30% !important;
 }
 @media (min-width: 400px) {
   #introSection {

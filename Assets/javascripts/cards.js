@@ -3,7 +3,7 @@ console.log('cards.js loaded')
 //  VARIABLES
 
 const container = document.querySelector('.cardsContainer');
-let count = 0;
+let count = 1; // set to 1 because of the html fallback
 
 // FUNCTIONS
 
@@ -55,7 +55,7 @@ function createCardsOnline(title, image, href, tags = []) { // create the card l
 
     createRow(`
         <div class="cardContainer cardContainer--online">
-            <a class="card" href="${href}" target="_blank" aria_label="Open project ${title}">
+            <a class="card" href="${href}" target="_blank" aria-label="Open project ${title}">
                 <div class="front">
                     <img class="cardImg" src="./Assets//images/${image}" alt="" aria-hidden="true">
                     <span class="cardOnline">Online</span>
@@ -128,13 +128,6 @@ const images = [
 ]
 
 // CARDS
-
-createCardsOnline(
-    "Dynalivres",
-    "dynaLivresCover.png",
-    "https://thomas-caufriez.github.io/Dyna-Livres/",
-    ["Redesign", "Student project"]
-);
 
 createCardsOnline(
     "Cookup",
