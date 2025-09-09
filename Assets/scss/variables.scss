@@ -29,15 +29,6 @@ $orange                         : #ED8E73;
 $white                          : #FEFEFA;
 
 ///// FONTS
-@font-face { // MAIN TITLES (h1 + custom)
-  font-family: 'Horsemen';
-  src: url('../fonts/Horsemen.woff2') format('woff2'),
-       url('../fonts/Horsemen.woff') format('woff');
-  font-weight: normal;
-  font-style: normal;
-  font-display: swap;
-}
-
 @font-face { // BUTTONS AND H2
   font-family: 'RussoOne';
   src: url('../fonts/RussoOne.woff2') format('woff2'),
@@ -96,6 +87,15 @@ $white                          : #FEFEFA;
   font-family: 'AXROutrunner';
   src: url('../fonts/AXROutrunner.woff2') format('woff2'),
        url('../fonts/AXROutrunner.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face { // MAIN TITLES (custom)
+  font-family: 'Horsemen';
+  src: url('../fonts/Horsemen.woff2') format('woff2'),
+       url('../fonts/Horsemen.woff') format('woff');
   font-weight: normal;
   font-style: normal;
   font-display: swap;
