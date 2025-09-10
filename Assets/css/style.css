@@ -555,8 +555,8 @@ nav.sidebar ul li:has(.active) a {
 }
 
 .cardContainer {
-  width: 340px;
-  height: 345px;
+  width: 300px;
+  height: 320px;
   transition: 500ms ease-out;
 }
 .cardContainer .card {
