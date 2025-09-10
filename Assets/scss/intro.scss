@@ -6,11 +6,12 @@
 
     background-color: $purpleGradient;
 
-    min-height: 75vh;
+    min-height: auto !important;
+
     display: grid;
     grid-template-areas: "stack";
 
-    margin: 0;
+    margin: 0 0 180px 0;
     padding: 0;
 
     * {
@@ -47,7 +48,169 @@
 
     h1 {
 
-        display: none; // temporary
+        z-index: 4;
+
+        align-self: center;
+        justify-self: center;
+
+        display: flex;
+        flex-direction: column;
+
+        transform: rotate(-5deg);
+
+        color: white;
+
+        line-height: 2.5rem;
+
+        @include responsive(mobile) {
+
+                line-height: 3.5rem;
+        }
+
+        @include responsive(tablet) {
+
+                line-height: 5.5rem;
+        }
+
+        @include responsive(desktop) {
+
+                line-height: 7.5rem;
+        }
+
+        @include responsive(FHD) {
+
+                line-height: 9rem;
+        }
+
+        @include responsive(UHD) {
+
+                line-height: 11rem;
+        }
+
+        #h1Web {
+
+            z-index: 4.1;
+
+            color: $orange;
+
+            filter: 
+                drop-shadow(0 0 3px $orange)
+                drop-shadow(0 0 5px $purple);
+
+            font-family: 'Horsemen', sans-serif;
+            font-weight: 100;
+            font-size: 2.5rem;
+
+            @include responsive(mobile) {
+
+                font-size: 3.5rem;
+            }
+
+            @include responsive(tablet) {
+
+                font-size: 6rem;
+            }
+
+            @include responsive(desktop) {
+
+                font-size: 8rem;
+            }
+
+            @include responsive(FHD) {
+
+                font-size: 10rem;
+            }
+
+            @include responsive(UHD) {
+
+                font-size: 12rem;
+            }
+        }
+
+        #h1Dev {
+
+            z-index: 5;
+
+            filter: 
+                drop-shadow(0 0 5px $pink) 
+                drop-shadow(0 0 5px $pink) 
+                drop-shadow(0 0 5px $pink) 
+                drop-shadow(0 0 2px $purple);
+
+            font-family: 'AXROutrunner', sans-serif;
+            font-weight: 100;
+            font-size: 4rem;
+
+            transform: translate(10%, 10%);
+
+            @include responsive(mobile) {
+
+                font-size: 6rem;
+            }
+
+            @include responsive(tablet) {
+
+                font-size: 10rem;
+
+                transform: translate(25%, 20%);
+            }
+
+            @include responsive(desktop) {
+
+                font-size: 12rem;
+            }
+
+            @include responsive(FHD) {
+
+                font-size: 15rem;
+            }
+
+            @include responsive(UHD) {
+
+                font-size: 18rem;
+            }
+        }
+
+        #h1Name {
+
+            z-index: 5;
+
+            filter: drop-shadow(0 0 2px $purple);
+
+            text-wrap: nowrap;
+            font-family: 'Torchzilla', sans-serif;
+            font-weight: 100;
+            font-size: 1.2rem;
+
+            transform: translateX(30%);
+
+            @include responsive(mobile) {
+
+                font-size: 1.8rem;
+            }
+
+            @include responsive(tablet) {
+
+                font-size: 2.8rem;
+
+                transform: translateX(50%);
+            }
+
+            @include responsive(desktop) {
+
+                font-size: 3.2rem;
+            }
+
+            @include responsive(FHD) {
+
+                font-size: 4.2rem;
+            }
+
+            @include responsive(UHD) {
+
+                font-size: 5.2rem;
+            }
+        }
     }
 }
 
