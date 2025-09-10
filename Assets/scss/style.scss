@@ -32,6 +32,13 @@ html {
     overflow-x: hidden;
 }
 
+main {
+
+    z-index: 100;
+    position: relative;
+    background-color: $darkPurple;
+}
+
 body {
 
     background: $darkPurple;

@@ -4,54 +4,61 @@
 /// CONTENT
 #introSection {
 
-    background-color: $purpleGradient;
+    background: $purpleGradient;
 
     min-height: auto !important;
 
     display: grid;
     grid-template-areas: "stack";
 
-    margin: 0 0 180px 0;
+    margin: 0;
     padding: 0;
+
+    z-index: 0;
 
     * {
 
         grid-area: stack;
+
+        align-self: center;
+        justify-self: center;
     }
 
     #grid {
 
-        transform: translateY(-10px);
-
         z-index: 0;
+    }
+    
+    #stars {
+        
+        z-index: 1;
     }
 
     #sun {
 
-        z-index: 1;
+        z-index: 2;
     }
 
     #palms {
 
-        z-index: 2;
+        z-index: 3;
     }
 
     #horizon {
 
-        z-index: 3;
+        z-index: 4;
     }
 
     #transition {
 
         z-index: 10;
+
+        transform: translateY(10px);
     }
 
     h1 {
 
-        z-index: 4;
-
-        align-self: center;
-        justify-self: center;
+        z-index: 5;
 
         display: flex;
         flex-direction: column;
@@ -89,7 +96,7 @@
 
         #h1Web {
 
-            z-index: 4.1;
+            z-index: 5;
 
             color: $orange;
 
@@ -100,6 +107,8 @@
             font-family: 'Horsemen', sans-serif;
             font-weight: 100;
             font-size: 2.5rem;
+
+            align-self: center;
 
             @include responsive(mobile) {
 
@@ -129,7 +138,7 @@
 
         #h1Dev {
 
-            z-index: 5;
+            z-index: 6;
 
             filter: 
                 drop-shadow(0 0 5px $pink) 
@@ -141,7 +150,7 @@
             font-weight: 100;
             font-size: 4rem;
 
-            transform: translate(10%, 10%);
+            align-self: center;
 
             @include responsive(mobile) {
 
@@ -151,8 +160,6 @@
             @include responsive(tablet) {
 
                 font-size: 10rem;
-
-                transform: translate(25%, 20%);
             }
 
             @include responsive(desktop) {
@@ -173,7 +180,7 @@
 
         #h1Name {
 
-            z-index: 5;
+            z-index: 6;
 
             filter: drop-shadow(0 0 2px $purple);
 
@@ -182,7 +189,7 @@
             font-weight: 100;
             font-size: 1.2rem;
 
-            transform: translateX(30%);
+            align-self: end;
 
             @include responsive(mobile) {
 
@@ -192,8 +199,6 @@
             @include responsive(tablet) {
 
                 font-size: 2.8rem;
-
-                transform: translateX(50%);
             }
 
             @include responsive(desktop) {

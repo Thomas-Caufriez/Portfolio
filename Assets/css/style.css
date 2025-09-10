@@ -220,7 +220,7 @@ nav.sidebar {
   transform: translateY(-50%);
   top: 50%;
   left: 20px;
-  z-index: 100;
+  z-index: 999;
   background-color: #403568;
   padding: 10px;
   border-radius: 100px;
@@ -279,36 +279,40 @@ nav.sidebar ul li:has(.active) a {
 }
 
 #introSection {
-  background-color: linear-gradient(to bottom, #18132A 0%, #2A214A 50%);
+  background: linear-gradient(to bottom, #18132A 0%, #2A214A 50%);
   min-height: auto !important;
   display: grid;
   grid-template-areas: "stack";
-  margin: 0 0 180px 0;
+  margin: 0;
   padding: 0;
+  z-index: 0;
 }
 #introSection * {
   grid-area: stack;
+  align-self: center;
+  justify-self: center;
 }
 #introSection #grid {
-  transform: translateY(-10px);
   z-index: 0;
 }
-#introSection #sun {
+#introSection #stars {
   z-index: 1;
 }
-#introSection #palms {
+#introSection #sun {
   z-index: 2;
 }
-#introSection #horizon {
+#introSection #palms {
   z-index: 3;
+}
+#introSection #horizon {
+  z-index: 4;
 }
 #introSection #transition {
   z-index: 10;
+  transform: translateY(10px);
 }
 #introSection h1 {
-  z-index: 4;
-  align-self: center;
-  justify-self: center;
+  z-index: 5;
   display: flex;
   flex-direction: column;
   transform: rotate(-5deg);
@@ -341,12 +345,13 @@ nav.sidebar ul li:has(.active) a {
   }
 }
 #introSection h1 #h1Web {
-  z-index: 4.1;
+  z-index: 5;
   color: #ED8E73;
   filter: drop-shadow(0 0 3px #ED8E73) drop-shadow(0 0 5px #403568);
   font-family: "Horsemen", sans-serif;
   font-weight: 100;
   font-size: 2.5rem;
+  align-self: center;
 }
 @media (min-width: 400px) {
   #introSection h1 #h1Web {
@@ -374,12 +379,12 @@ nav.sidebar ul li:has(.active) a {
   }
 }
 #introSection h1 #h1Dev {
-  z-index: 5;
+  z-index: 6;
   filter: drop-shadow(0 0 5px #DB408E) drop-shadow(0 0 5px #DB408E) drop-shadow(0 0 5px #DB408E) drop-shadow(0 0 2px #403568);
   font-family: "AXROutrunner", sans-serif;
   font-weight: 100;
   font-size: 4rem;
-  transform: translate(10%, 10%);
+  align-self: center;
 }
 @media (min-width: 400px) {
   #introSection h1 #h1Dev {
@@ -389,7 +394,6 @@ nav.sidebar ul li:has(.active) a {
 @media (min-width: 768px) {
   #introSection h1 #h1Dev {
     font-size: 10rem;
-    transform: translate(25%, 20%);
   }
 }
 @media (min-width: 1024px) {
@@ -408,13 +412,13 @@ nav.sidebar ul li:has(.active) a {
   }
 }
 #introSection h1 #h1Name {
-  z-index: 5;
+  z-index: 6;
   filter: drop-shadow(0 0 2px #403568);
   text-wrap: nowrap;
   font-family: "Torchzilla", sans-serif;
   font-weight: 100;
   font-size: 1.2rem;
-  transform: translateX(30%);
+  align-self: end;
 }
 @media (min-width: 400px) {
   #introSection h1 #h1Name {
@@ -424,7 +428,6 @@ nav.sidebar ul li:has(.active) a {
 @media (min-width: 768px) {
   #introSection h1 #h1Name {
     font-size: 2.8rem;
-    transform: translateX(50%);
   }
 }
 @media (min-width: 1024px) {
@@ -852,6 +855,12 @@ html {
   min-height: 100vh;
   height: auto;
   overflow-x: hidden;
+}
+
+main {
+  z-index: 100;
+  position: relative;
+  background-color: #2A214A;
 }
 
 body {
