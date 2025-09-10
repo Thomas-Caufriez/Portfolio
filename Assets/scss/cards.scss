@@ -112,6 +112,12 @@
         height: 345px;
     }
 
+    @include responsive(UHD) {
+
+        width: 500px;
+        height: 484px;
+    }
+
     .card {
 
         width: 100%;
@@ -150,6 +156,11 @@
             font-size: 1rem;
 
             box-shadow: 0 0 8px $purple;
+
+            @include responsive(UHD) {
+
+                font-size: 1.2rem;
+            }
         }
 
         .cardArchive {
@@ -187,6 +198,11 @@
                     text-shadow: 0 0 2px $white;
 
                     margin-bottom: 20px;
+
+                    @include responsive(UHD) {
+
+                        font-size: 3rem;
+                    }
                 }
 
                 .cardTags {
@@ -217,6 +233,11 @@
                         box-shadow: 0 0 5px $orange;
 
                         text-wrap: nowrap;
+
+                        @include responsive(UHD) {
+
+                            font-size: 1.5rem;
+                        }
                     }
                 }
             }
