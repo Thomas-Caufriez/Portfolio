@@ -468,6 +468,10 @@ nav.sidebar ul li:has(.active) a {
   }
 }
 
+#bioSection .row {
+  row-gap: 2rem;
+  column-gap: 6rem;
+}
 #bioSection .horsemen {
   font-family: "horsemen", sans-serif;
   font-weight: 100;
@@ -754,6 +758,14 @@ nav.sidebar ul li:has(.active) a {
   z-index: 2;
   text-shadow: 0 0 2px #FEFEFA;
   margin-bottom: 20px;
+}
+.cardContainer--archive .card .back .cardBody--back .cardText--back p {
+  font-size: 1rem;
+}
+@media (min-width: 2560px) {
+  .cardContainer--archive .card .back .cardBody--back .cardText--back p {
+    font-size: 1.6rem;
+  }
 }
 
 .selector {

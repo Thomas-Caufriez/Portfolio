@@ -423,6 +423,16 @@
 
                             margin-bottom: 20px;
                         }
+
+                        p {
+
+                            font-size: 1rem;
+
+                            @include responsive(UHD) {
+
+                                font-size: 1.6rem;
+                            }
+                        }
                     }
                 }
             }

@@ -133,12 +133,12 @@ createCardsOnline(
     "Cookup",
     "cookupCover.png",
     "https://cookup.emu.isfsc.be/",
-    ["Wordpress", "Student project"]
+    ["Student", "Wordpress"]
 );
 
 createCardsArchive(
     "Au-plaisir",
     "auPlaisir.png",
-    "Made during my 2nd school year internship. I was tasked to migrate a website to my master of internship's WordPress template with the possibility for the client to change anything whenever they want",
-    ["Wordpress", "Internship project"]
+    "Made during my 2nd school year internship.<br>I was tasked to migrate a website into my master of internship's WordPress template with the possibility for the client to change anything whenever they want",
+    ["Internship", "Wordpress"]
 );
