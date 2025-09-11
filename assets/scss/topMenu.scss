@@ -1,0 +1,31 @@
+/// IMPORT FILES
+@use 'variables' as *;
+@use 'buttons' as *;
+
+/// CONTENT
+
+.topMenu {
+
+    position: fixed;
+    z-index: 999;
+    right: 20px;
+    
+    width: auto;
+    height: auto;
+
+    display: flex;
+    justify-content: flex-end;
+    gap: 2rem;
+
+    padding-top: 20px;
+
+    .btnWrapper {
+
+        .btn {
+
+            font-size: 1rem;
+
+            padding: 0.8rem 1rem;
+        }
+    }
+}

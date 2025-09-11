@@ -1,33 +1,42 @@
 console.log('skills.js loaded')
 
+// FUNCTIONS
+
+function isEnglish() {
+    
+  return document.documentElement.lang === "en";
+}
+
 // SKILL GENERATOR
 
 const skills = [
 
-    { src: "./Assets/images/bootstrap.svg", alt: "Bootstrap icon", category: "front"},
-    { src: "./Assets/images/js.svg", alt: "Javascript icon", category: "front"},
-    { src: "./Assets/images/php.svg", alt: "PHP icon", category: "back"},
-    { src: "./Assets/images/python.svg", alt: "Python icon", category: "back"},
-    { src: "./Assets/images/wordpress.svg", alt: "WordPress icon", category: "back"},
-    { src: "./Assets/images/adobe.svg", alt: "Adobe icon", category: "others"},
-    { src: "./Assets/images/figma.svg", alt: "Figma icon", category: "others"},
-    { src: "./Assets/images/slack.svg", alt: "Slack icon", category: "others"},
+    { src: "./assets/images/bootstrap.svg", alt: "Bootstrap icon", category: "front"},
+    { src: "./assets/images/js.svg", alt: "Javascript icon", category: "front"},
+    { src: "./assets/images/php.svg", alt: "PHP icon", category: "back"},
+    { src: "./assets/images/python.svg", alt: "Python icon", category: "back"},
+    { src: "./assets/images/wordpress.svg", alt: "WordPress icon", category: "back"},
+    { src: "./assets/images/adobe.svg", alt: "Adobe icon", category: "others"},
+    { src: "./assets/images/figma.svg", alt: "Figma icon", category: "others"},
+    { src: "./assets/images/slack.svg", alt: "Slack icon", category: "others"},
 ];
 
 const iconLayout = document.querySelector(".skillsContainer");
 
-skills.forEach((skill) => [
+skills.forEach((skill) => {
+
+    let skillSrc = isEnglish() ? "." + skill.src : skill.src;
+
     iconLayout.innerHTML += `
         <div class="iconContainer">
-            <img src="${skill.src}" alt="${skill.alt}" class="skillIcon" data-category="${skill.category}">
+            <img src="${skillSrc}" alt="${skill.alt}" class="skillIcon" data-category="${skill.category}" loading="lazy">
         </div>
     `
-]);
+});
 
 // SKILLS LISTENER
 const btnSkills     = document.querySelectorAll(".btnSkills");
 let btnActive       = document.querySelector(".selector").querySelector(".active");
-console.log(btnActive);
 const icons         = document.querySelectorAll(".skillIcon");
 
 btnSkills.forEach((btn) => 

@@ -278,6 +278,22 @@ nav.sidebar ul li:has(.active) a {
   transform: scale(1.2);
 }
 
+.topMenu {
+  position: fixed;
+  z-index: 999;
+  right: 20px;
+  width: auto;
+  height: auto;
+  display: flex;
+  justify-content: flex-end;
+  gap: 2rem;
+  padding-top: 20px;
+}
+.topMenu .btnWrapper .btn {
+  font-size: 1rem;
+  padding: 0.8rem 1rem;
+}
+
 #introSection {
   background: linear-gradient(to bottom, #18132A 0%, #2A214A 50%);
   min-height: auto !important;
