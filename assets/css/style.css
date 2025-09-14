@@ -286,12 +286,81 @@ nav.sidebar ul li:has(.active) a {
   height: auto;
   display: flex;
   justify-content: flex-end;
+  align-items: center;
   gap: 2rem;
   padding-top: 20px;
 }
 .topMenu .btnWrapper .btn {
-  font-size: 1rem;
+  font-size: 0.8rem;
   padding: 0.8rem 1rem;
+}
+@media (min-width: 768px) {
+  .topMenu .btnWrapper .btn {
+    font-size: 1rem;
+  }
+}
+.topMenu .btnWrapper .btn.mobile {
+  display: block;
+}
+@media (min-width: 768px) {
+  .topMenu .btnWrapper .btn.mobile {
+    display: none;
+  }
+}
+.topMenu .btnWrapper .btn.desktop {
+  display: none;
+}
+@media (min-width: 768px) {
+  .topMenu .btnWrapper .btn.desktop {
+    display: block;
+  }
+}
+.topMenu .musicBtn {
+  display: flex;
+  cursor: pointer;
+  margin-right: 10px;
+  position: relative;
+}
+.topMenu .musicBtn img {
+  cursor: pointer;
+  filter: drop-shadow(0 0 5px #ED8E73);
+  z-index: 0;
+}
+.topMenu .musicBtn .wave1, .topMenu .musicBtn .wave2 {
+  position: absolute;
+  top: 50%;
+  left: calc(100% + 10px);
+  transform: translate(-50%, -50%);
+  filter: drop-shadow(0 0 5px #ED8E73);
+  opacity: 100%;
+  transition: opacity 0.2s ease;
+}
+.topMenu .musicBtn .wave2 {
+  left: calc(100% + 20px);
+}
+.topMenu .musicBtn::before, .topMenu .musicBtn::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(45deg);
+  width: 200%;
+  height: 5px;
+  border-radius: 10px;
+  opacity: 0;
+  background: #ED8E73;
+  z-index: 2;
+  transition: opacity 0.2s ease;
+}
+.topMenu .musicBtn::after {
+  transform: translate(-50%, -50%) rotate(-45deg);
+}
+.topMenu .musicBtn.muted::before, .topMenu .musicBtn.muted::after {
+  content: "";
+  opacity: 100%;
+}
+.topMenu .musicBtn.muted .wave1, .topMenu .musicBtn.muted .wave2 {
+  opacity: 0%;
 }
 
 #introSection {

@@ -15,6 +15,8 @@
 
     display: flex;
     justify-content: flex-end;
+
+    align-items: center;
     gap: 2rem;
 
     padding-top: 20px;
@@ -23,9 +25,116 @@
 
         .btn {
 
-            font-size: 1rem;
+            font-size: 0.8rem;
 
             padding: 0.8rem 1rem;
+
+            @include responsive(tablet) {
+
+                font-size: 1rem;
+            }
+
+            &.mobile {
+
+                display: block;
+
+                @include responsive(tablet) {
+
+                    display: none;
+                }
+            }
+
+            &.desktop {
+
+                display: none;
+
+                @include responsive(tablet) {
+
+                    display: block;
+                }
+            }
+        }
+    }
+
+    .musicBtn {
+
+        display: flex;
+
+        cursor: pointer;
+
+        margin-right: 10px;
+
+        position: relative;
+
+        img {
+
+            cursor: pointer;
+
+            filter: drop-shadow(0 0 5px $orange);
+
+            z-index: 0;
+        }
+
+        .wave1, .wave2 {
+
+            position: absolute;
+
+            top: 50%;
+            left: calc(100% + 10px);
+            transform: translate(-50%, -50%); 
+
+            filter: drop-shadow(0 0 5px $orange);
+
+            opacity: 100%;
+            
+            transition: opacity 0.2s ease;
+        }
+
+        .wave2 {
+
+            left: calc(100% + 20px);
+        }
+
+        &::before, &::after {
+
+            content: "";
+
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%) rotate(45deg);
+
+            width: 200%;
+            height: 5px;
+            border-radius: 10px;
+
+            opacity: 0;
+
+            background: $orange;
+
+            z-index: 2;
+
+            transition: opacity 0.2s ease;
+        }
+
+        &::after {
+
+            transform: translate(-50%, -50%) rotate(-45deg);
+        }
+
+        &.muted {
+
+            &::before, &::after {
+
+                content: "";
+
+                opacity: 100%;
+            }
+
+            .wave1, .wave2 {
+
+                opacity: 0%;
+            }
         }
     }
 }

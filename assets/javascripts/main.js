@@ -5,6 +5,7 @@ import "./skills.js";
 import "./cards.js";
 import "./sidebar.js";
 import "./parallax.js";
+import "./music.js";
 
 // others
 document.addEventListener("DOMContentLoaded", function() {

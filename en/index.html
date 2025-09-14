@@ -54,8 +54,40 @@
         </nav>
 
         <div class="topMenu">
+            <div class="musicWrapper">
+
+                <audio id="music" loop>
+                    <source src="../assets/sounds/synthwave-80s-retro-background-music-400483.mp3" type="audio/mpeg">
+                    <source src="../assets/sounds/synthwave-80s-retro-background-music-400483.ogg" type="audio/ogg">
+                </audio>
+                    
+                <button class="musicBtn muted">
+                    <img src="../assets/images/sound.svg" alt="Lecteur de musique">
+                    <svg width="6" height="18" viewBox="0 0 6 18" fill="none" xmlns="http://www.w3.org/2000/svg" class=" wave1">
+                        <path d="M2.00122 2.00012C4.66722 5.55617 4.66722 12.4443 2.00122 16.0003" stroke="url(#paint0_linear_410_208)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+                        <defs>
+                            <linearGradient id="paint0_linear_410_208" x1="-5.99878" y1="-7" x2="-5.99878" y2="25" gradientUnits="userSpaceOnUse">
+                                <stop stop-color="#FFDC57"/>
+                                <stop offset="1" stop-color="#DB408E"/>
+                            </linearGradient>
+                        </defs>
+                    </svg>
+
+                    <svg width="10" height="32" viewBox="0 0 10 32" fill="none" xmlns="http://www.w3.org/2000/svg" class=" wave2">
+                        <path d="M2.00122 2.00006C9.97722 9.61616 10.0252 22.4343 2.00122 30.0004" stroke="url(#paint0_linear_410_212)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+                        <defs>
+                            <linearGradient id="paint0_linear_410_212" x1="-11.9988" y1="0" x2="-11.9988" y2="32" gradientUnits="userSpaceOnUse">
+                                <stop stop-color="#FFDC57"/>
+                                <stop offset="1" stop-color="#DB408E"/>
+                            </linearGradient>
+                        </defs>
+                    </svg>
+
+                </button>
+            </div>
             <div class="btnWrapper">
-                <a href="../index.html" class="btn" lang="fr">Passer en FR</a>
+                <a href="../index.html" class="btn desktop" lang="fr">Passer en FR</a>
+                <a href="../index.html" class="btn mobile" lang="fr">FR</a>
             </div>
         </div>
 
