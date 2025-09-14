@@ -825,7 +825,6 @@ nav.sidebar ul li:has(.active) a {
   }
 }
 .cardContainer--archive:hover .card {
-  cursor: pointer;
   transform: rotateY(180deg);
 }
 .cardContainer--archive .card {
