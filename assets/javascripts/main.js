@@ -6,6 +6,7 @@ import "./cards.js";
 import "./sidebar.js";
 import "./parallax.js";
 import "./music.js";
+import "./scrollTooltip.js"
 
 // others
 document.addEventListener("DOMContentLoaded", function() {

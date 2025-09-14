@@ -392,12 +392,34 @@ nav.sidebar ul li:has(.active) a {
 #introSection #horizon {
   z-index: 4;
 }
+#introSection #scroll1, #introSection #scroll2 {
+  z-index: 5;
+  position: absolute;
+  top: 82%;
+  left: 50%;
+  width: 20px;
+  height: auto;
+  filter: drop-shadow(0 0 4px #ED8E73) drop-shadow(0 0 1px #2A214A);
+  opacity: 40%;
+  transition: opacity 1500ms ease;
+}
+#introSection #scroll1.glowing, #introSection #scroll2.glowing {
+  opacity: 100%;
+}
+@media (min-width: 768px) {
+  #introSection #scroll1, #introSection #scroll2 {
+    width: 40px;
+  }
+}
+#introSection #scroll2 {
+  top: 85%;
+}
 #introSection #transition {
   z-index: 10;
   transform: translateY(10px);
 }
 #introSection h1 {
-  z-index: 5;
+  z-index: 6;
   display: flex;
   flex-direction: column;
   transform: rotate(-5deg);
@@ -430,7 +452,7 @@ nav.sidebar ul li:has(.active) a {
   }
 }
 #introSection h1 #h1Web {
-  z-index: 5;
+  z-index: 6;
   color: #ED8E73;
   filter: drop-shadow(0 0 3px #ED8E73) drop-shadow(0 0 5px #403568);
   font-family: "Horsemen", sans-serif;
@@ -464,7 +486,7 @@ nav.sidebar ul li:has(.active) a {
   }
 }
 #introSection h1 #h1Dev {
-  z-index: 6;
+  z-index: 7;
   filter: drop-shadow(0 0 5px #DB408E) drop-shadow(0 0 5px #DB408E) drop-shadow(0 0 5px #DB408E) drop-shadow(0 0 2px #403568);
   font-family: "AXROutrunner", sans-serif;
   font-weight: 100;
@@ -497,7 +519,7 @@ nav.sidebar ul li:has(.active) a {
   }
 }
 #introSection h1 #h1Name {
-  z-index: 6;
+  z-index: 7;
   filter: drop-shadow(0 0 2px #403568);
   text-wrap: nowrap;
   font-family: "Torchzilla", sans-serif;

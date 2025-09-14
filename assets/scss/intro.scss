@@ -49,6 +49,42 @@
         z-index: 4;
     }
 
+    #scroll1, #scroll2 {
+
+        z-index: 5;
+
+        position: absolute;
+        top: 82%;
+        left: 50%;
+
+        width: 20px;
+        height: auto;
+        
+        filter: 
+            drop-shadow(0 0 4px $orange)
+            drop-shadow(0 0 1px $darkPurple);
+
+
+        opacity: 40%;
+
+        transition: opacity 1500ms ease;
+
+        &.glowing {
+
+            opacity: 100%;
+        }
+
+        @include responsive(tablet) {
+
+            width: 40px;
+        }
+    }
+
+    #scroll2 {
+
+        top: 85%;
+    }
+
     #transition {
 
         z-index: 10;
@@ -58,7 +94,7 @@
 
     h1 {
 
-        z-index: 5;
+        z-index: 6;
 
         display: flex;
         flex-direction: column;
@@ -96,7 +132,7 @@
 
         #h1Web {
 
-            z-index: 5;
+            z-index: 6;
 
             color: $orange;
 
@@ -138,7 +174,7 @@
 
         #h1Dev {
 
-            z-index: 6;
+            z-index: 7;
 
             filter: 
                 drop-shadow(0 0 5px $pink) 
@@ -180,7 +216,7 @@
 
         #h1Name {
 
-            z-index: 6;
+            z-index: 7;
 
             filter: drop-shadow(0 0 2px $purple);
 

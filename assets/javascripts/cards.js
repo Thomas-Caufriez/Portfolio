@@ -168,8 +168,8 @@ createCardsArchive(
     "Au-plaisir",
     "auPlaisir.png",
     {
-        fr : "Fait pendant mon stage de 2ème année scolaire.<br>J’ai été chargé de migrer un site web dans le template WordPress de mon maître de stage avec la possibilité pour le client de changer n’importe quoi quand il le veut",
-        en : "Made during my 2nd school year internship.<br>I was tasked to migrate a website into my master of internship's WordPress template with the possibility for the client to change anything whenever they want"
+        fr : "Pendant mon stage de 2ᵉ année, j’ai migré un site web vers le template WordPress de mon maître de stage, permettant au client de gérer et modifier son site en toute autonomie.",
+        en : "During my 2nd year internship, I migrated a website to the WordPress template of my internship supervisor, allowing the client to manage and modify their site independently."
     },
     {
         fr : ["Stage", "Wordpress"],
