@@ -5,7 +5,7 @@ const mute = document.querySelector(".musicBtn");
 
 audio.volume = 0.03;
 
-mute.addEventListener("click", () => {
+mute.addEventListener("click", () => { // play pause music if click on button
 
     const muted = mute.classList.contains("muted");
 
@@ -13,10 +13,19 @@ mute.addEventListener("click", () => {
 
         audio.play();
         mute.classList.remove("muted");
-        
+
     } else {
 
         audio.pause();
         mute.classList.add("muted");
     }
 })
+
+document.addEventListener('visibilitychange', () => { // pause music if changing screen
+
+    if(document.hidden) {
+
+        audio.pause();
+        mute.classList.add("muted");
+    }
+});
