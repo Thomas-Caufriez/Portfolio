@@ -49,7 +49,7 @@
         z-index: 4;
     }
 
-    #scroll1, #scroll2 {
+    #scroll {
 
         z-index: 5;
 
@@ -57,32 +57,40 @@
         top: 82%;
         left: 50%;
 
-        width: 20px;
-        height: auto;
-        
-        filter: 
-            drop-shadow(0 0 4px $orange)
-            drop-shadow(0 0 1px $darkPurple);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+
+        pointer-events: none;
+
+        #scroll1, #scroll2 {
+
+            pointer-events: all;
+            width: 20px;
+            height: auto;
+
+            transform: translate(0);
+            
+            filter: 
+                drop-shadow(0 0 4px $orange)
+                drop-shadow(0 0 1px $darkPurple);
 
 
-        opacity: 40%;
+            opacity: 40%;
 
-        transition: opacity 1500ms ease;
+            transition: opacity 1500ms ease;
 
-        &.glowing {
+            &.glowing {
 
-            opacity: 100%;
+                opacity: 100%;
+            }
+
+            @include responsive(tablet) {
+
+                width: 40px;
+            }
         }
-
-        @include responsive(tablet) {
-
-            width: 40px;
-        }
-    }
-
-    #scroll2 {
-
-        top: 85%;
     }
 
     #transition {
@@ -90,6 +98,8 @@
         z-index: 10;
 
         transform: translateY(10px);
+
+        pointer-events: none;
     }
 
     h1 {
