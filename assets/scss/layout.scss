@@ -5,12 +5,11 @@
 .container {
 
     width: 100%;
-    min-height: 80vh;
+    height: max(100%, 80vh);
     
     position: relative;
 
     padding: 180px 0;
-
 }
 
 .content {

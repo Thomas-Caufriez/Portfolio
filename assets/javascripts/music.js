@@ -3,7 +3,7 @@ console.log('music.js loaded')
 const audio = document.querySelector("#music");
 const mute = document.querySelector(".musicBtn");
 
-audio.volume = 0.03;
+audio.volume = 0.04;
 
 mute.addEventListener("click", () => { // play pause music if click on button
 
