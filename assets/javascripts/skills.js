@@ -11,14 +11,14 @@ function isEnglish() {
 
 const skills = [
 
-    { src: "./assets/images/bootstrap.svg", alt: "Bootstrap icon", category: "front"},
-    { src: "./assets/images/js.svg", alt: "Javascript icon", category: "front"},
-    { src: "./assets/images/php.svg", alt: "PHP icon", category: "back"},
-    { src: "./assets/images/python.svg", alt: "Python icon", category: "back"},
-    { src: "./assets/images/wordpress.svg", alt: "WordPress icon", category: "back"},
-    { src: "./assets/images/adobe.svg", alt: "Adobe icon", category: "others"},
-    { src: "./assets/images/figma.svg", alt: "Figma icon", category: "others"},
-    { src: "./assets/images/slack.svg", alt: "Slack icon", category: "others"},
+    { src: "./assets/images/bootstrap.svg", alt: "Bootstrap", category: "front"},
+    { src: "./assets/images/js.svg", alt: "Javascript", category: "front"},
+    { src: "./assets/images/php.svg", alt: "PHP", category: "back"},
+    { src: "./assets/images/python.svg", alt: "Python", category: "back"},
+    { src: "./assets/images/wordpress.svg", alt: "WordPress", category: "back"},
+    { src: "./assets/images/adobe.svg", alt: "Adobe", category: "others"},
+    { src: "./assets/images/figma.svg", alt: "Figma", category: "others"},
+    { src: "./assets/images/slack.svg", alt: "Slack", category: "others"},
 ];
 
 const iconLayout = document.querySelector(".skillsContainer");
@@ -29,6 +29,7 @@ skills.forEach((skill) => {
 
     iconLayout.innerHTML += `
         <div class="iconContainer">
+            <span>${skill.alt}</span>
             <img src="${skillSrc}" alt="${skill.alt}" class="skillIcon" data-category="${skill.category}" loading="lazy">
         </div>
     `

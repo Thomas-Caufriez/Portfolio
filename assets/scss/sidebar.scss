@@ -12,14 +12,8 @@ nav.sidebar  {
     left: 20px;
 
     z-index: 999;
-        
-    background-color: $purple;
     
-    padding: 10px;
-
     border-radius: 100px;
-
-    box-shadow: 0 0 2px $deepPurple;
 
     @include responsive(bigScreen) {
 
@@ -53,15 +47,22 @@ nav.sidebar  {
         }
 
         li {
-            
-            aspect-ratio: 1/1;
 
-            padding: 15px;
+            width: 60px;
+            height: 60px;
+
             transition: 0.3s ease-out;
 
             border-radius: 100px;
 
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
             a {
+
+                height: 50%;
+                width: 50%;
 
                 font-size: 1.6rem;
 
@@ -81,13 +82,13 @@ nav.sidebar  {
 
                 &:hover {
 
-                    transform: scale(1.2);
+                    transform: scale(1.1);
                 }
             }
 
             &:has(.active) {
 
-                background-color: $darkPurple;
+                background-color: $purple;
 
                 a {
 
