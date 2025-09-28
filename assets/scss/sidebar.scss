@@ -7,7 +7,9 @@ nav.sidebar  {
     display: none;
 
     position: fixed;
-    transform: translateY(-50%);
+    -webkit-transform: translateY(-50%);
+        -ms-transform: translateY(-50%);
+            transform: translateY(-50%);
     top: 50%;
     left: 20px;
 
@@ -17,13 +19,24 @@ nav.sidebar  {
 
     @include responsive(bigScreen) {
 
+        display: -webkit-box;
+
+        display: -ms-flexbox;
+
         display: flex;
     }
 
     ul {
 
+        display: -webkit-box;
+
+        display: -ms-flexbox;
+
         display: flex;
-        flex-direction: column;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+                flex-direction: column;
         gap: 1.2rem;
 
         position: relative;
@@ -33,7 +46,9 @@ nav.sidebar  {
             content: "";
             
             position: absolute;
-            transform: translateX(-50%);
+            -webkit-transform: translateX(-50%);
+                -ms-transform: translateX(-50%);
+                    transform: translateX(-50%);
             top: calc(100% + 1.7rem);
             left: 50%;
 
@@ -43,21 +58,35 @@ nav.sidebar  {
 
             background: $hotGradientDiagonal;
 
-            box-shadow: 0 0 5px $orange;
+            -webkit-box-shadow: 0 0 5px $orange;
+
+                    box-shadow: 0 0 5px $orange;
         }
 
         li {
 
-            width: 60px;
-            height: 60px;
+            width: 50px;
+            height: 50px;
+
+            -webkit-transition: 0.3s ease-out;
+
+            -o-transition: 0.3s ease-out;
 
             transition: 0.3s ease-out;
 
             border-radius: 100px;
 
+            display: -webkit-box;
+
+            display: -ms-flexbox;
+
             display: flex;
-            justify-content: center;
-            align-items: center;
+            -webkit-box-pack: center;
+                -ms-flex-pack: center;
+                    justify-content: center;
+            -webkit-box-align: center;
+                -ms-flex-align: center;
+                    align-items: center;
 
             a {
 
@@ -72,17 +101,35 @@ nav.sidebar  {
                 background-clip: text;
                 color: transparent;
                 
-                filter: drop-shadow(0 0 2px $orange);
+                -webkit-filter: drop-shadow(0 0 2px $orange);
+                
+                        filter: drop-shadow(0 0 2px $orange);
+
+                display: -webkit-box;
+
+                display: -ms-flexbox;
 
                 display: flex;
-                align-items: center;
-                justify-content: center;
+                -webkit-box-align: center;
+                    -ms-flex-align: center;
+                        align-items: center;
+                -webkit-box-pack: center;
+                    -ms-flex-pack: center;
+                        justify-content: center;
+
+                -webkit-transition: 0.3s ease-in-out;
+
+                -o-transition: 0.3s ease-in-out;
 
                 transition: 0.3s ease-in-out;
 
                 &:hover {
 
-                    transform: scale(1.1);
+                    -webkit-transform: scale(1.1);
+
+                        -ms-transform: scale(1.1);
+
+                            transform: scale(1.1);
                 }
             }
 
@@ -92,7 +139,11 @@ nav.sidebar  {
 
                 a {
 
-                    transform: scale(1.2);
+                    -webkit-transform: scale(1.2);
+
+                        -ms-transform: scale(1.2);
+
+                            transform: scale(1.2);
                 }
             }
         }

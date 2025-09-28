@@ -45,7 +45,9 @@
     width: 300%;
     overflow: hidden;
     line-height: 0;
-    transform: rotate(180deg);
+    -webkit-transform: rotate(180deg);
+        -ms-transform: rotate(180deg);
+            transform: rotate(180deg);
 
     @include responsive(tablet) {
 
@@ -79,8 +81,15 @@
 
     .cardsContainer {
 
+        display: -webkit-box;
+
+        display: -ms-flexbox;
+
         display: flex;
-        flex-direction: column;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+                flex-direction: column;
         row-gap: 4rem;
 
         margin-top: 50px;
@@ -89,20 +98,36 @@
 
         .row {
 
-            justify-content: space-evenly;
+            -webkit-box-pack: space-evenly;
 
-            flex-wrap: wrap;
+                -ms-flex-pack: space-evenly;
+
+                    justify-content: space-evenly;
+
+            -ms-flex-wrap: wrap;
+
+                flex-wrap: wrap;
             row-gap: 4rem;
 
-            align-items: center;
+            -webkit-box-align: center;
+
+                -ms-flex-align: center;
+
+                    align-items: center;
         }
     }
-}// CARDS
+}
+
+// CARDS
 
 .cardContainer { //general
 
     width: 300px; // I very dislike this way of doing it because the cards does not have their own height depending on their content but I have to because of the flip
     height: 320px;
+
+    -webkit-transition: 500ms ease-out;
+
+    -o-transition: 500ms ease-out;
 
     transition: 500ms ease-out;
 
@@ -155,7 +180,9 @@
             font-family: 'AudioWide', sans-serif;
             font-size: 1rem;
 
-            box-shadow: 0 0 8px $purple;
+            -webkit-box-shadow: 0 0 8px $purple;
+
+                    box-shadow: 0 0 8px $purple;
 
             @include responsive(UHD) {
 
@@ -191,6 +218,10 @@
 
                     position: relative;
 
+                    width: -webkit-fit-content;
+
+                    width: -moz-fit-content;
+
                     width: fit-content;
 
                     z-index: 2;
@@ -207,15 +238,21 @@
 
                 .cardTags {
 
+                    display: -webkit-box;
+
+                    display: -ms-flexbox;
+
                     display: flex;
-                    flex-wrap: wrap;
+                    -ms-flex-wrap: wrap;
+                        flex-wrap: wrap;
 
                     gap: 10px;
 
                     span {
 
                         background: $hotGradientMovingDiagonal;
-                        animation: gradientMovingDiagonal 20s linear infinite;
+                        -webkit-animation: gradientMovingDiagonal 20s linear infinite;
+                                animation: gradientMovingDiagonal 20s linear infinite;
                         background-size: 200% 200%;
 
                         z-index: 2;
@@ -230,7 +267,9 @@
                         font-size: 1rem;
                         text-align: center;
 
-                        box-shadow: 0 0 5px $orange;
+                        -webkit-box-shadow: 0 0 5px $orange;
+
+                                box-shadow: 0 0 5px $orange;
 
                         text-wrap: nowrap;
 
@@ -254,7 +293,9 @@
                 height: auto;
                 max-height: 200px;
 
-                filter: drop-shadow(0 0 3px $darkPurple);
+                -webkit-filter: drop-shadow(0 0 3px $darkPurple);
+
+                        filter: drop-shadow(0 0 3px $darkPurple);
 
                 display: none;
 
@@ -271,19 +312,29 @@
         overflow: hidden;
         border-radius: 20px;
 
-        box-shadow: 0 0 20px $purple;
+        -webkit-box-shadow: 0 0 20px $purple;
+
+                box-shadow: 0 0 20px $purple;
 
         &:hover {
 
             cursor: pointer;
 
-            transform: translateY(-5%);
+            -webkit-transform: translateY(-5%);
+
+                -ms-transform: translateY(-5%);
+
+                    transform: translateY(-5%);
 
             .cardBody {
 
                 &::before { // glass effect
 
-                    transform: skew(-45deg) translate(250%, -10%);
+                    -webkit-transform: skew(-45deg) translate(250%, -10%);
+
+                        -ms-transform: skew(-45deg) translate(250%, -10%);
+
+                            transform: skew(-45deg) translate(250%, -10%);
                 }
 
                 .cardTitle::before { // underline
@@ -298,7 +349,7 @@
             &::before { // glass effect
 
                 content: "";
-                
+                                
                 position: absolute;
 
                 width: 50%;
@@ -308,10 +359,18 @@
                 opacity: 30%;
                 background: $white;
 
-                filter: blur(50px);
+                -webkit-filter: blur(50px);
+
+                        filter: blur(50px);
+
+                -webkit-transition: 500ms ease-out;
+
+                -o-transition: 500ms ease-out;
 
                 transition: 500ms ease-out;
-                transform: skew(-45deg) translate(-200%, -10%);
+                -webkit-transform: skew(-45deg) translate(-200%, -10%);
+                    -ms-transform: skew(-45deg) translate(-200%, -10%);
+                        transform: skew(-45deg) translate(-200%, -10%);
 
                 display: none;
 
@@ -337,7 +396,13 @@
                     border-radius: 50%;
                     background-color: $white;
 
-                    box-shadow: 0 0 2px $white;
+                    -webkit-box-shadow: 0 0 2px $white;
+
+                            box-shadow: 0 0 2px $white;
+
+                    -webkit-transition: 500ms ease-out;
+
+                    -o-transition: 500ms ease-out;
 
                     transition: 500ms ease-out;
 
@@ -352,20 +417,32 @@
         }
     }
 
+
     &--archive { // specific to not online cards
 
         &:hover {
 
             .card {
 
-                transform: rotateY(180deg);
+                -webkit-transform: rotateY(180deg);
+
+                        transform: rotateY(180deg);
             }
         }
 
         .card {
 
+            -webkit-transition: -webkit-transform 1500ms;
+
+            transition: -webkit-transform 1500ms;
+
+            -o-transition: transform 1500ms;
+
             transition: transform 1500ms;
-            transform-style: preserve-3d;
+
+            transition: transform 1500ms, -webkit-transform 1500ms;
+            -webkit-transform-style: preserve-3d;
+                    transform-style: preserve-3d;
 
 
             .front, .back {
@@ -381,14 +458,20 @@
                 border-radius: 20px;
                 overflow: hidden;
 
-                box-shadow: 0 0 20px $purple;
+                -webkit-box-shadow: 0 0 20px $purple;
 
-                object-fit: contain;
+                        box-shadow: 0 0 20px $purple;
+
+                -o-object-fit: contain;
+
+                   object-fit: contain;
             }
 
             .back {
 
-                transform: rotateY(180deg);
+                -webkit-transform: rotateY(180deg);
+
+                        transform: rotateY(180deg);
 
                 .cardBody--back {
 
@@ -413,6 +496,10 @@
                             font-family: 'Neon', sans-serif;
 
                             position: relative;
+
+                            width: -webkit-fit-content;
+
+                            width: -moz-fit-content;
 
                             width: fit-content;
 

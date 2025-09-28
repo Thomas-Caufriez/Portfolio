@@ -3,7 +3,6 @@
 @use 'buttons' as *;
 
 /// CONTENT
-
 .topMenu {
 
     position: fixed;
@@ -13,10 +12,20 @@
     width: auto;
     height: auto;
 
-    display: flex;
-    justify-content: flex-end;
+    display: -webkit-box;
 
-    align-items: center;
+    display: -ms-flexbox;
+
+    display: flex;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
+
+    -webkit-box-align: center;
+
+        -ms-flex-align: center;
+
+            align-items: center;
     gap: 2rem;
 
     padding-top: 20px;
@@ -58,6 +67,10 @@
 
     .musicBtn {
 
+        display: -webkit-box;
+
+        display: -ms-flexbox;
+
         display: flex;
 
         cursor: pointer;
@@ -70,7 +83,9 @@
 
             cursor: pointer;
 
-            filter: drop-shadow(0 0 5px $orange);
+            -webkit-filter: drop-shadow(0 0 5px $orange);
+
+                    filter: drop-shadow(0 0 5px $orange);
 
             z-index: 0;
         }
@@ -81,11 +96,19 @@
 
             top: 50%;
             left: calc(100% + 10px);
-            transform: translate(-50%, -50%); 
+            -webkit-transform: translate(-50%, -50%);
+                -ms-transform: translate(-50%, -50%);
+                    transform: translate(-50%, -50%); 
 
-            filter: drop-shadow(0 0 5px $orange);
+            -webkit-filter: drop-shadow(0 0 5px $orange); 
+
+                    filter: drop-shadow(0 0 5px $orange);
 
             opacity: 100%;
+            
+            -webkit-transition: opacity 0.2s ease;
+            
+            -o-transition: opacity 0.2s ease;
             
             transition: opacity 0.2s ease;
         }
@@ -102,7 +125,9 @@
             position: absolute;
             top: 50%;
             left: 50%;
-            transform: translate(-50%, -50%) rotate(45deg);
+            -webkit-transform: translate(-50%, -50%) rotate(45deg);
+                -ms-transform: translate(-50%, -50%) rotate(45deg);
+                    transform: translate(-50%, -50%) rotate(45deg);
 
             width: 200%;
             height: 5px;
@@ -114,12 +139,20 @@
 
             z-index: 2;
 
+            -webkit-transition: opacity 0.2s ease;
+
+            -o-transition: opacity 0.2s ease;
+
             transition: opacity 0.2s ease;
         }
 
         &::after {
 
-            transform: translate(-50%, -50%) rotate(-45deg);
+            -webkit-transform: translate(-50%, -50%) rotate(-45deg);
+
+                -ms-transform: translate(-50%, -50%) rotate(-45deg);
+
+                    transform: translate(-50%, -50%) rotate(-45deg);
         }
 
         &.muted {

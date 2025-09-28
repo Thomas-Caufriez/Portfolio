@@ -13,28 +13,93 @@ footer {
 
         .row {
 
-            justify-content: space-between;
+            -webkit-box-pack: justify;
+
+                -ms-flex-pack: justify;
+
+                    justify-content: space-between;
             
             &.footerIcons {
 
-                justify-content: space-evenly;
+                -webkit-box-pack: space-evenly;
+
+                    -ms-flex-pack: space-evenly;
+
+                        justify-content: space-evenly;
                 
                 margin-bottom: 50px;
 
-                flex-direction: row;
+                -webkit-box-orient: horizontal;
 
-                .footerIcon {
+                -webkit-box-direction: normal;
 
-                    width: 60px;
-                    height: auto;
+                    -ms-flex-direction: row;
 
-                    filter: drop-shadow(0 0 2px $orange);
+                        flex-direction: row;
 
-                    transition: 0.5s ease;
+                a {
+
+                    position: relative;
+
+                    .footerIcon {
+
+                        width: 60px;
+                        height: auto;
+
+                        -webkit-filter: drop-shadow(0 0 2px $orange);
+
+                                filter: drop-shadow(0 0 2px $orange);
+
+                        -webkit-transition: 0.5s ease;
+
+                        -o-transition: 0.5s ease;
+
+                        transition: 0.5s ease;
+
+                        &:hover {
+
+                            scale: 1.1;
+                        }
+                    }
+
+                    span {
+
+                        position: absolute;
+                        -webkit-transform: translate(-50%, -50%);
+                            -ms-transform: translate(-50%, -50%);
+                                transform: translate(-50%, -50%);
+                        top: 10px;
+                        left: 50%;
+
+                        color: $white;
+                        font-size: 1rem;
+                        font-family: 'Raleway', sans-serif;
+
+                        background-color: $purple;
+                        border-radius: 10px;
+                        -webkit-box-shadow: 0 0 2px $deepPurple;
+                                box-shadow: 0 0 2px $deepPurple;
+
+                        padding: 5px 10px;
+                        
+                        opacity: 0%;
+
+                        -webkit-transition: ease 0.2s;
+
+                        -o-transition: ease 0.2s;
+
+                        transition: ease 0.2s;
+                        
+                    }
 
                     &:hover {
 
-                        scale: 1.1;
+                        span {
+
+                            opacity: 100%;
+                            
+                            top: -25px;
+                        }
                     }
                 }
             }

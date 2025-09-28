@@ -23,9 +23,15 @@
         background-image: $hotGradientMovingDiagonal;
         background-size: 200% 200%;
 
-        animation: gradientMovingDiagonal 10s linear infinite;
+        -webkit-animation: gradientMovingDiagonal 10s linear infinite;
+
+                animation: gradientMovingDiagonal 10s linear infinite;
 
         z-index: -1;
+
+        -webkit-transition: opacity 0.3s ease-in-out;
+
+        -o-transition: opacity 0.3s ease-in-out;
 
         transition: opacity 0.3s ease-in-out;
         
@@ -45,15 +51,33 @@
         border: none;
         border-radius: 10px;
 
+        display: -webkit-inline-box;
+
+        display: -ms-inline-flexbox;
+
         display: inline-flex;
-        justify-content: center;
-        align-items: center;
+        -webkit-box-pack: center;
+            -ms-flex-pack: center;
+                justify-content: center;
+        -webkit-box-align: center;
+            -ms-flex-align: center;
+                align-items: center;
 
         white-space: nowrap;
 
+        -webkit-transition: -webkit-transform 0.3s ease-in-out;
+
+        transition: -webkit-transform 0.3s ease-in-out;
+
+        -o-transition: transform 0.3s ease-in-out;
+
         transition: transform 0.3s ease-in-out;
 
-        box-shadow: 0 0 15px $orange;
+        transition: transform 0.3s ease-in-out, -webkit-transform 0.3s ease-in-out;
+
+        -webkit-box-shadow: 0 0 15px $orange;
+
+                box-shadow: 0 0 15px $orange;
 
         cursor: pointer;
     }
@@ -65,11 +89,17 @@
             background: $hotGradientMovingDiagonal;
             background-size: 200% 200%;
 
-            animation: gradientMovingDiagonal 10s linear infinite;
+            -webkit-animation: gradientMovingDiagonal 10s linear infinite;
+
+                    animation: gradientMovingDiagonal 10s linear infinite;
 
             color: $purple;
 
-            transform: translate(-5px, -5px);
+            -webkit-transform: translate(-5px, -5px);
+
+                -ms-transform: translate(-5px, -5px);
+
+                    transform: translate(-5px, -5px);
         }
 
         &::before {
@@ -85,11 +115,17 @@
             background: $hotGradientMovingDiagonal;
             background-size: 200% 200%;
 
-            animation: gradientMovingDiagonal 10s linear infinite;
+            -webkit-animation: gradientMovingDiagonal 10s linear infinite;
+
+                    animation: gradientMovingDiagonal 10s linear infinite;
 
             color: $purple;
 
-            transform: translate(-5px, -5px);
+            -webkit-transform: translate(-5px, -5px);
+
+                -ms-transform: translate(-5px, -5px);
+
+                    transform: translate(-5px, -5px);
 
             cursor: default;
         }

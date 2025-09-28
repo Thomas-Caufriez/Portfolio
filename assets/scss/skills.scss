@@ -2,14 +2,25 @@
 @use 'variables' as *;
 
 /// CONTENT
-
 .selector {
     
+    display: -webkit-box;
+    
+    display: -ms-flexbox;
+    
     display: flex;
-    flex-wrap: wrap;
-    flex-direction: row;
-    justify-content: space-evenly;
-    align-items: center;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
     gap: 20px 10px;
 
     width: min(100%, 1040px);
@@ -19,16 +30,32 @@
 
 .skillsContainer {
 
+    display: -webkit-box;
+
+    display: -ms-flexbox;
+
     display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: center;
-    column-gap: 5rem;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-column-gap: 5rem;
+       -moz-column-gap: 5rem;
+            column-gap: 5rem;
     row-gap: 4rem;
     
     @include responsive(tablet) {
 
-        column-gap: 10rem;
+        -webkit-column-gap: 10rem;
+
+           -moz-column-gap: 10rem;
+
+                column-gap: 10rem;
     }
 
     .iconContainer {
@@ -40,15 +67,27 @@
             width: 4rem;
             height: auto;
 
-            filter: drop-shadow(0 0 3px $orange);
+            -webkit-filter: drop-shadow(0 0 3px $orange);
+
+                    filter: drop-shadow(0 0 3px $orange);
+
+            -webkit-transition: opacity 0.5s ease, -webkit-transform 0.5s ease;
+
+            transition: opacity 0.5s ease, -webkit-transform 0.5s ease;
+
+            -o-transition: opacity 0.5s ease, transform 0.5s ease;
 
             transition: opacity 0.5s ease, transform 0.5s ease;
+
+            transition: opacity 0.5s ease, transform 0.5s ease, -webkit-transform 0.5s ease;
 
             &.hidden {
 
                 opacity: 0.2;
 
-                filter: drop-shadow(0 0 0);
+                -webkit-filter: drop-shadow(0 0 0);
+
+                        filter: drop-shadow(0 0 0);
             }
 
             @include responsive(tablet) {
@@ -60,7 +99,9 @@
         span {
 
             position: absolute;
-            transform: translate(-50%, -50%);
+            -webkit-transform: translate(-50%, -50%);
+                -ms-transform: translate(-50%, -50%);
+                    transform: translate(-50%, -50%);
             top: 10px;
             left: 50%;
 
@@ -70,11 +111,16 @@
 
             background-color: $purple;
             border-radius: 10px;
-            box-shadow: 0 0 2px $deepPurple;
+            -webkit-box-shadow: 0 0 2px $deepPurple;
+                    box-shadow: 0 0 2px $deepPurple;
 
             padding: 5px 10px;
             
             opacity: 0%;
+
+            -webkit-transition: ease 0.2s;
+
+            -o-transition: ease 0.2s;
 
             transition: ease 0.2s;
         }

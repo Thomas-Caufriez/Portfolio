@@ -8,8 +8,10 @@
 
     height: auto !important;
 
+    display: -ms-grid;
+
     display: grid;
-    grid-template-areas: "stack";
+        grid-template-areas: "stack";
 
     margin: 0;
     padding: 0;
@@ -18,10 +20,17 @@
 
     * {
 
+        -ms-grid-row: 1;
+
+        -ms-grid-column: 1;
+
         grid-area: stack;
 
-        align-self: center;
-        justify-self: center;
+        -ms-grid-row-align: center;
+
+            align-self: center;
+        -ms-grid-column-align: center;
+            justify-self: center;
     }
 
     #grid {
@@ -57,9 +66,18 @@
         top: 82%;
         left: 50%;
 
+        display: -webkit-box;
+
+        display: -ms-flexbox;
+
         display: flex;
-        flex-direction: column;
-        justify-content: center;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+                flex-direction: column;
+        -webkit-box-pack: center;
+            -ms-flex-pack: center;
+                justify-content: center;
         text-align: center;
 
         pointer-events: none;
@@ -70,14 +88,26 @@
             width: 20px;
             height: auto;
 
-            transform: translate(0);
+            -webkit-transform: translate(0);
+
+                -ms-transform: translate(0);
+
+                    transform: translate(0);
             
-            filter: 
+            -webkit-filter: 
+                drop-shadow(0 0 4px $orange)
+                drop-shadow(0 0 1px $darkPurple);
+            
+                    filter: 
                 drop-shadow(0 0 4px $orange)
                 drop-shadow(0 0 1px $darkPurple);
 
 
             opacity: 40%;
+
+            -webkit-transition: opacity 1500ms ease;
+
+            -o-transition: opacity 1500ms ease;
 
             transition: opacity 1500ms ease;
 
@@ -97,7 +127,11 @@
 
         z-index: 10;
 
-        transform: translateY(10px);
+        -webkit-transform: translateY(10px);
+
+            -ms-transform: translateY(10px);
+
+                transform: translateY(10px);
 
         pointer-events: none;
     }
@@ -106,10 +140,21 @@
 
         z-index: 6;
 
-        display: flex;
-        flex-direction: column;
+        display: -webkit-box;
 
-        transform: rotate(-5deg);
+        display: -ms-flexbox;
+
+        display: flex;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+                flex-direction: column;
+
+        -webkit-transform: rotate(-5deg);
+
+            -ms-transform: rotate(-5deg);
+
+                transform: rotate(-5deg);
 
         color: white;
 
@@ -146,7 +191,11 @@
 
             color: $orange;
 
-            filter: 
+            -webkit-filter: 
+                drop-shadow(0 0 3px $orange)
+                drop-shadow(0 0 5px $purple);
+
+                    filter: 
                 drop-shadow(0 0 3px $orange)
                 drop-shadow(0 0 5px $purple);
 
@@ -154,7 +203,11 @@
             font-weight: 100;
             font-size: 2.5rem;
 
-            align-self: center;
+            -ms-flex-item-align: center;
+
+                -ms-grid-row-align: center;
+
+                align-self: center;
 
             @include responsive(mobile) {
 
@@ -186,7 +239,13 @@
 
             z-index: 7;
 
-            filter: 
+            -webkit-filter: 
+                drop-shadow(0 0 5px $pink) 
+                drop-shadow(0 0 5px $pink) 
+                drop-shadow(0 0 5px $pink) 
+                drop-shadow(0 0 2px $purple);
+
+                    filter: 
                 drop-shadow(0 0 5px $pink) 
                 drop-shadow(0 0 5px $pink) 
                 drop-shadow(0 0 5px $pink) 
@@ -196,7 +255,11 @@
             font-weight: 100;
             font-size: 4rem;
 
-            align-self: center;
+            -ms-flex-item-align: center;
+
+                -ms-grid-row-align: center;
+
+                align-self: center;
 
             @include responsive(mobile) {
 
@@ -228,14 +291,20 @@
 
             z-index: 7;
 
-            filter: drop-shadow(0 0 2px $purple);
+            -webkit-filter: drop-shadow(0 0 2px $purple);
+
+                    filter: drop-shadow(0 0 2px $purple);
 
             text-wrap: nowrap;
             font-family: 'Torchzilla', sans-serif;
             font-weight: 100;
             font-size: 1.2rem;
 
-            align-self: end;
+            -ms-flex-item-align: end;
+
+                -ms-grid-row-align: end;
+
+                align-self: end;
 
             @include responsive(mobile) {
 
