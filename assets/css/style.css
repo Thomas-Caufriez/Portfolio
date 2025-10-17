@@ -408,22 +408,6 @@ nav.sidebar ul li:has(.active) a {
     font-size: 1rem;
   }
 }
-.topMenu .btnWrapper .btn.mobile {
-  display: block;
-}
-@media (min-width: 768px) {
-  .topMenu .btnWrapper .btn.mobile {
-    display: none;
-  }
-}
-.topMenu .btnWrapper .btn.desktop {
-  display: none;
-}
-@media (min-width: 768px) {
-  .topMenu .btnWrapper .btn.desktop {
-    display: block;
-  }
-}
 .topMenu .musicBtn {
   display: -webkit-box;
   display: -ms-flexbox;

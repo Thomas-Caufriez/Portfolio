@@ -42,26 +42,6 @@
 
                 font-size: 1rem;
             }
-
-            &.mobile {
-
-                display: block;
-
-                @include responsive(tablet) {
-
-                    display: none;
-                }
-            }
-
-            &.desktop {
-
-                display: none;
-
-                @include responsive(tablet) {
-
-                    display: block;
-                }
-            }
         }
     }
 
